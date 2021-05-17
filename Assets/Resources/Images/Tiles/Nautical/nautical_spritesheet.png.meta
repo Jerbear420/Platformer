@@ -1,0 +1,5820 @@
+fileFormatVersion: 2
+guid: f8d15a4a0d41bc84ead39d1a65176740
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7221929156296789056
+    second: nautical_spritesheet_0
+  - first:
+      213: 6024415564719061888
+    second: nautical_spritesheet_1
+  - first:
+      213: -7445635652887379020
+    second: nautical_spritesheet_2
+  - first:
+      213: 4650970926332954598
+    second: nautical_spritesheet_3
+  - first:
+      213: 308849712738288274
+    second: nautical_spritesheet_4
+  - first:
+      213: 3508745935058172181
+    second: nautical_spritesheet_5
+  - first:
+      213: 6450061762405595076
+    second: nautical_spritesheet_6
+  - first:
+      213: 5937789674660049367
+    second: nautical_spritesheet_7
+  - first:
+      213: 8318336554128358782
+    second: nautical_spritesheet_8
+  - first:
+      213: 5227266987532627251
+    second: nautical_spritesheet_9
+  - first:
+      213: -6083330531879740389
+    second: nautical_spritesheet_10
+  - first:
+      213: 8748865029119001759
+    second: nautical_spritesheet_11
+  - first:
+      213: 8891384561970097206
+    second: nautical_spritesheet_12
+  - first:
+      213: -5709545210114390282
+    second: nautical_spritesheet_13
+  - first:
+      213: 6207486778398091508
+    second: nautical_spritesheet_14
+  - first:
+      213: -3195042112687342728
+    second: nautical_spritesheet_15
+  - first:
+      213: -762706550473463379
+    second: nautical_spritesheet_16
+  - first:
+      213: -6382860151195181026
+    second: nautical_spritesheet_17
+  - first:
+      213: 7213687346187441391
+    second: nautical_spritesheet_18
+  - first:
+      213: 1804177492345233142
+    second: nautical_spritesheet_19
+  - first:
+      213: -7171107717120018281
+    second: nautical_spritesheet_20
+  - first:
+      213: 4117598171983236491
+    second: nautical_spritesheet_21
+  - first:
+      213: 8309259086323501971
+    second: nautical_spritesheet_22
+  - first:
+      213: -2349801437041733359
+    second: nautical_spritesheet_23
+  - first:
+      213: -745344422538964054
+    second: nautical_spritesheet_24
+  - first:
+      213: -119599095228873315
+    second: nautical_spritesheet_25
+  - first:
+      213: 3947064556634591499
+    second: nautical_spritesheet_26
+  - first:
+      213: 3573953017036798612
+    second: nautical_spritesheet_27
+  - first:
+      213: 4342103299938464608
+    second: nautical_spritesheet_28
+  - first:
+      213: -997552834545182545
+    second: nautical_spritesheet_29
+  - first:
+      213: -590304442456899583
+    second: nautical_spritesheet_30
+  - first:
+      213: 225361393194246980
+    second: nautical_spritesheet_31
+  - first:
+      213: -5533093816610295652
+    second: nautical_spritesheet_32
+  - first:
+      213: 6743446659190157747
+    second: nautical_spritesheet_33
+  - first:
+      213: -6073854480132895637
+    second: nautical_spritesheet_34
+  - first:
+      213: -3612306118409967343
+    second: nautical_spritesheet_35
+  - first:
+      213: 6293470302736681935
+    second: nautical_spritesheet_36
+  - first:
+      213: 7937559723103656735
+    second: nautical_spritesheet_37
+  - first:
+      213: 1383589593357206391
+    second: nautical_spritesheet_38
+  - first:
+      213: -4905136071057833999
+    second: nautical_spritesheet_39
+  - first:
+      213: -3174285151195217910
+    second: nautical_spritesheet_40
+  - first:
+      213: -304720354983504543
+    second: nautical_spritesheet_41
+  - first:
+      213: 7366331503814733445
+    second: nautical_spritesheet_42
+  - first:
+      213: -7212088147093758986
+    second: nautical_spritesheet_43
+  - first:
+      213: 866745763738914191
+    second: nautical_spritesheet_44
+  - first:
+      213: 2829142221443547497
+    second: nautical_spritesheet_45
+  - first:
+      213: 9145385046133482375
+    second: nautical_spritesheet_46
+  - first:
+      213: -8331400686388544331
+    second: nautical_spritesheet_47
+  - first:
+      213: -1770568404924626156
+    second: nautical_spritesheet_48
+  - first:
+      213: -3010075893069482136
+    second: nautical_spritesheet_49
+  - first:
+      213: 7079711265448953579
+    second: nautical_spritesheet_50
+  - first:
+      213: -3901662493019359711
+    second: nautical_spritesheet_51
+  - first:
+      213: -6775758961284969773
+    second: nautical_spritesheet_52
+  - first:
+      213: -1414565629257217063
+    second: nautical_spritesheet_53
+  - first:
+      213: 6456228715578472487
+    second: nautical_spritesheet_54
+  - first:
+      213: -4808654972549958140
+    second: nautical_spritesheet_55
+  - first:
+      213: 7883788482029123386
+    second: nautical_spritesheet_56
+  - first:
+      213: 997477453056461551
+    second: nautical_spritesheet_57
+  - first:
+      213: 2567395137914363566
+    second: nautical_spritesheet_58
+  - first:
+      213: -6794049669507828375
+    second: nautical_spritesheet_59
+  - first:
+      213: -3884545356555330805
+    second: nautical_spritesheet_60
+  - first:
+      213: -5071869668280438832
+    second: nautical_spritesheet_61
+  - first:
+      213: 5661002311862383370
+    second: nautical_spritesheet_62
+  - first:
+      213: -6348524106417715288
+    second: nautical_spritesheet_63
+  - first:
+      213: 1603682314769037092
+    second: nautical_spritesheet_64
+  - first:
+      213: -8552135997549263332
+    second: nautical_spritesheet_65
+  - first:
+      213: 5474288912955587129
+    second: nautical_spritesheet_66
+  - first:
+      213: -4807300972485579170
+    second: nautical_spritesheet_67
+  - first:
+      213: 3858090608573514438
+    second: nautical_spritesheet_68
+  - first:
+      213: -2618435214105103627
+    second: nautical_spritesheet_69
+  - first:
+      213: -6206408641173295337
+    second: nautical_spritesheet_70
+  - first:
+      213: -1084147292052803317
+    second: nautical_spritesheet_71
+  - first:
+      213: -7739971134830628292
+    second: nautical_spritesheet_72
+  - first:
+      213: -1353912892380234373
+    second: nautical_spritesheet_73
+  - first:
+      213: 1627551309272247456
+    second: nautical_spritesheet_74
+  - first:
+      213: -7271290286383083136
+    second: nautical_spritesheet_75
+  - first:
+      213: 3619701292200351730
+    second: nautical_spritesheet_76
+  - first:
+      213: -4287320406028816254
+    second: nautical_spritesheet_77
+  - first:
+      213: 6522489070908548121
+    second: nautical_spritesheet_78
+  - first:
+      213: 7951970816878415448
+    second: nautical_spritesheet_79
+  - first:
+      213: -4674410610459922462
+    second: nautical_spritesheet_80
+  - first:
+      213: 4603640059278344421
+    second: nautical_spritesheet_81
+  - first:
+      213: 6020554046311368360
+    second: nautical_spritesheet_82
+  - first:
+      213: 516324712008607777
+    second: nautical_spritesheet_83
+  - first:
+      213: 398378365193941510
+    second: nautical_spritesheet_84
+  - first:
+      213: -1076769128857286002
+    second: nautical_spritesheet_85
+  - first:
+      213: 8693898004468570686
+    second: nautical_spritesheet_86
+  - first:
+      213: -1280325622352797904
+    second: nautical_spritesheet_87
+  - first:
+      213: -2305985255202271898
+    second: nautical_spritesheet_88
+  - first:
+      213: 160873264966097007
+    second: nautical_spritesheet_89
+  - first:
+      213: -6045580313625412876
+    second: nautical_spritesheet_90
+  - first:
+      213: -1696452855764731825
+    second: nautical_spritesheet_91
+  - first:
+      213: 8605360566171822517
+    second: nautical_spritesheet_92
+  - first:
+      213: 5851053354068158039
+    second: nautical_spritesheet_93
+  - first:
+      213: 8183274440637849769
+    second: nautical_spritesheet_94
+  - first:
+      213: -3153998220641112753
+    second: nautical_spritesheet_95
+  - first:
+      213: -6928508942751183471
+    second: nautical_spritesheet_96
+  - first:
+      213: -4681738546386298170
+    second: nautical_spritesheet_97
+  - first:
+      213: -3627471424501721383
+    second: nautical_spritesheet_98
+  - first:
+      213: -1382634277239827055
+    second: nautical_spritesheet_99
+  - first:
+      213: -4948113887379132021
+    second: nautical_spritesheet_100
+  - first:
+      213: 8232714691888755996
+    second: nautical_spritesheet_101
+  - first:
+      213: 7479787296150234853
+    second: nautical_spritesheet_102
+  - first:
+      213: 942064907508800969
+    second: nautical_spritesheet_103
+  - first:
+      213: 8303221698944277607
+    second: nautical_spritesheet_104
+  - first:
+      213: 405224922218780869
+    second: nautical_spritesheet_105
+  - first:
+      213: -1326632823855719681
+    second: nautical_spritesheet_106
+  - first:
+      213: 2415583333759879820
+    second: nautical_spritesheet_107
+  - first:
+      213: -8807514735946536368
+    second: nautical_spritesheet_108
+  - first:
+      213: 1050002747081410788
+    second: nautical_spritesheet_109
+  - first:
+      213: 5284248260899103394
+    second: nautical_spritesheet_110
+  - first:
+      213: -3922405016321448470
+    second: nautical_spritesheet_111
+  - first:
+      213: -7521871800367995457
+    second: nautical_spritesheet_112
+  - first:
+      213: -715956782237201089
+    second: nautical_spritesheet_113
+  - first:
+      213: 2802943907794750091
+    second: nautical_spritesheet_114
+  - first:
+      213: -5619146714860796099
+    second: nautical_spritesheet_115
+  - first:
+      213: -7669279698522507450
+    second: nautical_spritesheet_116
+  - first:
+      213: 7539420438913038351
+    second: nautical_spritesheet_117
+  - first:
+      213: 682135609559474826
+    second: nautical_spritesheet_118
+  - first:
+      213: -5628806201601625412
+    second: nautical_spritesheet_119
+  - first:
+      213: 3517688577453288277
+    second: nautical_spritesheet_120
+  - first:
+      213: 5155132296695399013
+    second: nautical_spritesheet_121
+  - first:
+      213: 7291377239103580569
+    second: nautical_spritesheet_122
+  - first:
+      213: 5740084993917637301
+    second: nautical_spritesheet_123
+  - first:
+      213: 5031529938330434494
+    second: nautical_spritesheet_124
+  - first:
+      213: 2053599144814411260
+    second: nautical_spritesheet_125
+  - first:
+      213: -5816654931827818976
+    second: nautical_spritesheet_126
+  - first:
+      213: -8356767083504402600
+    second: nautical_spritesheet_127
+  - first:
+      213: -9141615639761552589
+    second: nautical_spritesheet_128
+  - first:
+      213: 4188343655634200819
+    second: nautical_spritesheet_129
+  - first:
+      213: 6058219085538097300
+    second: nautical_spritesheet_130
+  - first:
+      213: -5251362160587880386
+    second: nautical_spritesheet_131
+  - first:
+      213: -9146102719470126123
+    second: nautical_spritesheet_132
+  - first:
+      213: 9122058854575379315
+    second: nautical_spritesheet_133
+  - first:
+      213: -1591634566989910951
+    second: nautical_spritesheet_134
+  - first:
+      213: 8151781079258065234
+    second: nautical_spritesheet_135
+  - first:
+      213: -4367273226261019418
+    second: nautical_spritesheet_136
+  - first:
+      213: 8412708067802904589
+    second: nautical_spritesheet_137
+  - first:
+      213: -4217117124387841125
+    second: nautical_spritesheet_138
+  - first:
+      213: -7015980253457533593
+    second: nautical_spritesheet_139
+  - first:
+      213: -7322570722754858938
+    second: nautical_spritesheet_140
+  - first:
+      213: -2151862713789065234
+    second: nautical_spritesheet_141
+  - first:
+      213: -4707430312600415615
+    second: nautical_spritesheet_142
+  - first:
+      213: 3720827945534563600
+    second: nautical_spritesheet_143
+  - first:
+      213: -3854121355067501309
+    second: nautical_spritesheet_144
+  - first:
+      213: -8276254968995063224
+    second: nautical_spritesheet_145
+  - first:
+      213: -2043223950053748102
+    second: nautical_spritesheet_146
+  - first:
+      213: 6535872811949745064
+    second: nautical_spritesheet_147
+  - first:
+      213: -6976465687274559115
+    second: nautical_spritesheet_148
+  - first:
+      213: 5929842360847336969
+    second: nautical_spritesheet_149
+  - first:
+      213: -9191227651887595107
+    second: nautical_spritesheet_150
+  - first:
+      213: -224075352309066136
+    second: nautical_spritesheet_151
+  - first:
+      213: -8881463188652837716
+    second: nautical_spritesheet_152
+  - first:
+      213: 368671797107892515
+    second: nautical_spritesheet_153
+  - first:
+      213: -7820420665916331680
+    second: nautical_spritesheet_154
+  - first:
+      213: -4272506750924947134
+    second: nautical_spritesheet_155
+  - first:
+      213: -5802674461076198560
+    second: nautical_spritesheet_156
+  - first:
+      213: 5516113944977059077
+    second: nautical_spritesheet_157
+  - first:
+      213: 2556819503161297570
+    second: nautical_spritesheet_158
+  - first:
+      213: 8264220018934169916
+    second: nautical_spritesheet_159
+  - first:
+      213: 593691640901538092
+    second: nautical_spritesheet_160
+  - first:
+      213: -6341815259961642049
+    second: nautical_spritesheet_161
+  - first:
+      213: -3479693418751857558
+    second: nautical_spritesheet_162
+  - first:
+      213: 8325758642656486589
+    second: nautical_spritesheet_163
+  - first:
+      213: 996141770471867841
+    second: nautical_spritesheet_164
+  - first:
+      213: -1827743905724752568
+    second: nautical_spritesheet_165
+  - first:
+      213: 7476212493340223562
+    second: nautical_spritesheet_166
+  - first:
+      213: -2831964616287316210
+    second: nautical_spritesheet_167
+  - first:
+      213: 2151645359108920305
+    second: nautical_spritesheet_168
+  - first:
+      213: 3591896250970381597
+    second: nautical_spritesheet_169
+  - first:
+      213: -6925954836474851280
+    second: nautical_spritesheet_170
+  - first:
+      213: -646176979352207475
+    second: nautical_spritesheet_171
+  - first:
+      213: -3276047589102047364
+    second: nautical_spritesheet_172
+  - first:
+      213: -2718510836947375423
+    second: nautical_spritesheet_173
+  - first:
+      213: -8786601500369315618
+    second: nautical_spritesheet_174
+  - first:
+      213: -7863203702974229775
+    second: nautical_spritesheet_175
+  - first:
+      213: -2885210522451551258
+    second: nautical_spritesheet_176
+  - first:
+      213: 2528893991751121373
+    second: nautical_spritesheet_177
+  - first:
+      213: -8918647848701663090
+    second: nautical_spritesheet_178
+  - first:
+      213: 1122360900986345433
+    second: nautical_spritesheet_179
+  - first:
+      213: -5464946378956019580
+    second: nautical_spritesheet_180
+  - first:
+      213: 2641962690864439064
+    second: nautical_spritesheet_181
+  - first:
+      213: 7936384935766230155
+    second: nautical_spritesheet_182
+  - first:
+      213: 3463657567137785110
+    second: nautical_spritesheet_183
+  - first:
+      213: 472141972086778281
+    second: nautical_spritesheet_184
+  - first:
+      213: -8215521641419667828
+    second: nautical_spritesheet_185
+  - first:
+      213: -6769247855932736731
+    second: nautical_spritesheet_186
+  - first:
+      213: -5722927453796036760
+    second: nautical_spritesheet_187
+  - first:
+      213: 5038885704290748281
+    second: nautical_spritesheet_188
+  - first:
+      213: -3341332598901700565
+    second: nautical_spritesheet_189
+  - first:
+      213: -1778559170291083184
+    second: nautical_spritesheet_190
+  - first:
+      213: -3264304665890481765
+    second: nautical_spritesheet_191
+  - first:
+      213: -7297330985392797297
+    second: nautical_spritesheet_192
+  - first:
+      213: 805347978287002074
+    second: nautical_spritesheet_193
+  - first:
+      213: -6277200887889003971
+    second: nautical_spritesheet_194
+  - first:
+      213: -1716796615279092769
+    second: nautical_spritesheet_195
+  - first:
+      213: -6451051130319018360
+    second: nautical_spritesheet_196
+  - first:
+      213: -1765757508858238948
+    second: nautical_spritesheet_197
+  - first:
+      213: 8697848231773527849
+    second: nautical_spritesheet_198
+  - first:
+      213: 2426223751762360665
+    second: nautical_spritesheet_199
+  - first:
+      213: 5788042394086750622
+    second: nautical_spritesheet_200
+  - first:
+      213: -7959555417421882978
+    second: nautical_spritesheet_201
+  - first:
+      213: -4936246394620735918
+    second: nautical_spritesheet_202
+  - first:
+      213: -633832734544838511
+    second: nautical_spritesheet_203
+  - first:
+      213: 348132957739874084
+    second: nautical_spritesheet_204
+  - first:
+      213: 6624946006270155897
+    second: nautical_spritesheet_205
+  - first:
+      213: 6238710743963918127
+    second: nautical_spritesheet_206
+  - first:
+      213: -5417069285180509175
+    second: nautical_spritesheet_207
+  - first:
+      213: 6118078228902757251
+    second: nautical_spritesheet_208
+  - first:
+      213: -5393881201435757557
+    second: nautical_spritesheet_209
+  - first:
+      213: -3422462526646503520
+    second: nautical_spritesheet_210
+  - first:
+      213: -6152107916298613319
+    second: nautical_spritesheet_211
+  - first:
+      213: 6914387830740087175
+    second: nautical_spritesheet_212
+  - first:
+      213: -2069764819670354203
+    second: nautical_spritesheet_213
+  - first:
+      213: 2844601970224133
+    second: nautical_spritesheet_214
+  - first:
+      213: 3902954443793177595
+    second: nautical_spritesheet_215
+  - first:
+      213: 6581271784444115369
+    second: nautical_spritesheet_216
+  - first:
+      213: -2219116257384815641
+    second: nautical_spritesheet_217
+  - first:
+      213: 3012355958493419494
+    second: nautical_spritesheet_218
+  - first:
+      213: -3294649122049757271
+    second: nautical_spritesheet_219
+  - first:
+      213: -9079374284773864940
+    second: nautical_spritesheet_220
+  - first:
+      213: 2877779768468868797
+    second: nautical_spritesheet_221
+  - first:
+      213: -882375465671230290
+    second: nautical_spritesheet_222
+  - first:
+      213: 4015166262439966158
+    second: nautical_spritesheet_223
+  - first:
+      213: -421339202323229798
+    second: nautical_spritesheet_224
+  - first:
+      213: -1436456418813200400
+    second: nautical_spritesheet_225
+  - first:
+      213: -6995536667410414460
+    second: nautical_spritesheet_226
+  - first:
+      213: -1044561136880284973
+    second: nautical_spritesheet_227
+  - first:
+      213: 1917424501971029393
+    second: nautical_spritesheet_228
+  - first:
+      213: 3452564216243175545
+    second: nautical_spritesheet_229
+  - first:
+      213: 8197508660337330241
+    second: nautical_spritesheet_230
+  - first:
+      213: 5135301468427355855
+    second: nautical_spritesheet_231
+  - first:
+      213: -3919313315821201231
+    second: nautical_spritesheet_232
+  - first:
+      213: 2151718968935685044
+    second: nautical_spritesheet_233
+  - first:
+      213: -5058785015843372428
+    second: nautical_spritesheet_234
+  - first:
+      213: 8988282861835703604
+    second: nautical_spritesheet_235
+  - first:
+      213: -4575452747779381600
+    second: nautical_spritesheet_236
+  - first:
+      213: 6889031555493261370
+    second: nautical_spritesheet_237
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nautical_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3b4ed12bd86cb90800000000000000
+      internalID: -7221929156296789056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bf96299060b9350800000000000000
+      internalID: 6024415564719061888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b30aa682d9cba890800000000000000
+      internalID: -7445635652887379020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7ceb46a619b8040800000000000000
+      internalID: 4650970926332954598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2924fb86d21494400800000000000000
+      internalID: 308849712738288274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519fc3a76d191b030800000000000000
+      internalID: 3508745935058172181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7f38fbff8338950800000000000000
+      internalID: 6450061762405595076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d13815df34476250800000000000000
+      internalID: 5937789674660049367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1976
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7db7f6060ba07370800000000000000
+      internalID: 8318336554128358782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d220241abfa8840800000000000000
+      internalID: 5227266987532627251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c1504bc1ba39ba0800000000000000
+      internalID: -6083330531879740389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94c978f3663a6970800000000000000
+      internalID: 8748865029119001759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cae99862b846b70800000000000000
+      internalID: 8891384561970097206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f64912c1ee93c0b0800000000000000
+      internalID: -5709545210114390282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f82a56165c652650800000000000000
+      internalID: 6207486778398091508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b7bd6602ee8a3d0800000000000000
+      internalID: -3195042112687342728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da96a2fee625a65f0800000000000000
+      internalID: -762706550473463379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1904
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10e305a2868b67a0800000000000000
+      internalID: -6382860151195181026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe49b3eeb6a2c1460800000000000000
+      internalID: 7213687346187441391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe1efeced9b90910800000000000000
+      internalID: 1804177492345233142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798bff2868b1b7c90800000000000000
+      internalID: -7171107717120018281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dcbd0b8b5a42930800000000000000
+      internalID: 4117598171983236491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bcffa5d1b605370800000000000000
+      internalID: 8309259086323501971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111dc64fa04d36fd0800000000000000
+      internalID: -2349801437041733359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa31f3b523108a5f0800000000000000
+      internalID: -745344422538964054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95cc6da149175ef0800000000000000
+      internalID: -119599095228873315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1832
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b015db34d4ac6c630800000000000000
+      internalID: 3947064556634591499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49af968555b399130800000000000000
+      internalID: 3573953017036798612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06332e222ff324c30800000000000000
+      internalID: 4342103299938464608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa810447bfaf722f0800000000000000
+      internalID: -997552834545182545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1008506bc31dec7f0800000000000000
+      internalID: -590304442456899583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4432e6b3ef4a02300800000000000000
+      internalID: 225361393194246980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9078084d708633b0800000000000000
+      internalID: -5533093816610295652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1f2da1209859d50800000000000000
+      internalID: 6743446659190157747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c834ee78555bba0800000000000000
+      internalID: -6073854480132895637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1760
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119243069b28eddc0800000000000000
+      internalID: -3612306118409967343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb071765e5e65750800000000000000
+      internalID: 6293470302736681935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b9a0f5380e72e60800000000000000
+      internalID: 7937559723103656735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773cbf2976f733310800000000000000
+      internalID: 1383589593357206391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff74ad5bb47debb0800000000000000
+      internalID: -4905136071057833999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00463b197ca2f3d0800000000000000
+      internalID: -3174285151195217910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165906d937a65cbf0800000000000000
+      internalID: -304720354983504543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e65a669777a3660800000000000000
+      internalID: 7366331503814733445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbdbaf9a0489eb90800000000000000
+      internalID: -7212088147093758986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1688
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d8b3e0eac470c00800000000000000
+      internalID: 866745763738914191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961c3386cd1234720800000000000000
+      internalID: 2829142221443547497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783a4f0ce3feaee70800000000000000
+      internalID: 9145385046133482375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc7d56a73be06c80800000000000000
+      internalID: -8331400686388544331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b00f5aa6dad67e0800000000000000
+      internalID: -1770568404924626156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86770ae5cef0a36d0800000000000000
+      internalID: -3010075893069482136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be68a61d2ef204260800000000000000
+      internalID: 7079711265448953579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126bd1e62a28ad9c0800000000000000
+      internalID: -3901662493019359711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da80fccf1ba7f1a0800000000000000
+      internalID: -6775758961284969773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1616
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db85ac0e047e5ce0800000000000000
+      internalID: -1414565629257217063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7283bbc6fc1299950800000000000000
+      internalID: 6456228715578472487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4067eb1a7c9344db0800000000000000
+      internalID: -4808654972549958140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3779a3bad7d86d60800000000000000
+      internalID: 7883788482029123386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea44ec6570c7dd00800000000000000
+      internalID: 997477453056461551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae5379764831a320800000000000000
+      internalID: 2567395137914363566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96530ae62dfa6b1a0800000000000000
+      internalID: -6794049669507828375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b50a45492571ac0800000000000000
+      internalID: -3884545356555330805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfe01b98691d99b0800000000000000
+      internalID: -5071869668280438832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1544
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03f83ffb9bef8e40800000000000000
+      internalID: 5661002311862383370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7c7fc06f285e7a0800000000000000
+      internalID: -6348524106417715288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4277260919c614610800000000000000
+      internalID: 1603682314769037092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16ce331f95b05980800000000000000
+      internalID: -8552135997549263332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ab39623c498fb40800000000000000
+      internalID: 5474288912955587129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e6b965c39094db0800000000000000
+      internalID: -4807300972485579170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c28b4ba7f0ba8530800000000000000
+      internalID: 3858090608573514438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f234ebbb0379abd0800000000000000
+      internalID: -2618435214105103627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f63fb49386ed9a0800000000000000
+      internalID: -6206408641173295337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1472
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01bdfc28c554f0f0800000000000000
+      internalID: -1084147292052803317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32b4a0d249169490800000000000000
+      internalID: -7739971134830628292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dbad0d56fe53de0800000000000000
+      internalID: -1353912892380234373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ace4eaea49369610800000000000000
+      internalID: 1627551309272247456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081536d6200371b90800000000000000
+      internalID: -7271290286383083136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7df92b523cb3230800000000000000
+      internalID: 3619701292200351730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2807e505ec06084c0800000000000000
+      internalID: -4287320406028816254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9142fda9049848a50800000000000000
+      internalID: 6522489070908548121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e8f4c93531b5e60800000000000000
+      internalID: 7951970816878415448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1400
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef283dd058212fb0800000000000000
+      internalID: -4674410610459922462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e04b072e3a63ef30800000000000000
+      internalID: 4603640059278344421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a60e61c10e4d8350800000000000000
+      internalID: 6020554046311368360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1286708079a5a2700800000000000000
+      internalID: 516324712008607777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602f59f2303578500800000000000000
+      internalID: 398378365193941510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8aca59ae2c8e01f0800000000000000
+      internalID: -1076769128857286002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a93dd3c2ee6a870800000000000000
+      internalID: 8693898004468570686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f94d241ae5b3ee0800000000000000
+      internalID: -1280325622352797904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d4166c0ae7fffd0800000000000000
+      internalID: -2305985255202271898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1328
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f685924d1698b3200800000000000000
+      internalID: 160873264966097007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa33415cb8c91ca0800000000000000
+      internalID: -6045580313625412876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4832f9ad1df478e0800000000000000
+      internalID: -1696452855764731825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b963de77d16c6770800000000000000
+      internalID: 8605360566171822517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756271b760e133150800000000000000
+      internalID: 5851053354068158039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0a0c53fb4d09170800000000000000
+      internalID: 8183274440637849769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4de874345fba34d0800000000000000
+      internalID: -3153998220641112753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dc23c43ddf8df90800000000000000
+      internalID: -6928508942751183471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca1463d89f170fb0800000000000000
+      internalID: -4681738546386298170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1256
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6d1b565f1a8adc0800000000000000
+      internalID: -3627471424501721383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19557da4375efcce0800000000000000
+      internalID: -1382634277239827055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81f69ab2a4c45bb0800000000000000
+      internalID: -4948113887379132021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c153b2bb46a704270800000000000000
+      internalID: 8232714691888755996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6a38e8aea8dc760800000000000000
+      internalID: 7479787296150234853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd5c67ca03e21d00800000000000000
+      internalID: 942064907508800969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c93e09428fa3370800000000000000
+      internalID: 8303221698944277607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c85cf67be5af9500800000000000000
+      internalID: 405224922218780869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffad4bab97ad69de0800000000000000
+      internalID: -1326632823855719681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_107
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1184
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a8c166e30e58120800000000000000
+      internalID: 2415583333759879820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a63e9030c65c580800000000000000
+      internalID: -8807514735946536368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_109
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8c8f07feb529e00800000000000000
+      internalID: 1050002747081410788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_110
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2eddfcbcb655940800000000000000
+      internalID: 5284248260899103394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_111
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae523f06b61d099c0800000000000000
+      internalID: -3922405016321448470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_112
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5a90d3371fc9790800000000000000
+      internalID: -7521871800367995457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_113
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d483099196016f0800000000000000
+      internalID: -715956782237201089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_114
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a837d22ae06e620800000000000000
+      internalID: 2802943907794750091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_115
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d374be795d7c402b0800000000000000
+      internalID: -5619146714860796099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_116
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1112
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647737e6fbe319590800000000000000
+      internalID: -7669279698522507450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f083bb191f661a860800000000000000
+      internalID: 7539420438913038351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_118
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82ef6809be677900800000000000000
+      internalID: 682135609559474826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_119
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2f404159672e1b0800000000000000
+      internalID: -5628806201601625412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_120
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b6d89af1751d030800000000000000
+      internalID: 3517688577453288277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_121
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5624ca2c285ba8740800000000000000
+      internalID: 5155132296695399013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_122
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9992324b7fc203560800000000000000
+      internalID: 7291377239103580569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_123
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2d203c3e0e8af40800000000000000
+      internalID: 5740084993917637301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_124
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbbdea12d593d540800000000000000
+      internalID: 5031529938330434494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_125
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1040
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd75b1ba89df7c10800000000000000
+      internalID: 2053599144814411260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ef06f4827174fa0800000000000000
+      internalID: -5816654931827818976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_127
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ffa051d9cc60c80800000000000000
+      internalID: -8356767083504402600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_128
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b7bde8205722180800000000000000
+      internalID: -9141615639761552589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_129
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8665f2d5cff1a30800000000000000
+      internalID: 4188343655634200819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_130
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4987df4192e131450800000000000000
+      internalID: 6058219085538097300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_131
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e384b3710f96f17b0800000000000000
+      internalID: -5251362160587880386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_132
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbbfb6e804821180800000000000000
+      internalID: -9146102719470126123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_133
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 968
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3731c2f8230189e70800000000000000
+      internalID: 9122058854575379315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_134
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c655e4bc069e9e0800000000000000
+      internalID: -1591634566989910951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_135
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2596deb93b1f02170800000000000000
+      internalID: 8151781079258065234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_136
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e443a7b3245463c0800000000000000
+      internalID: -4367273226261019418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_137
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08747c4a61ffb470800000000000000
+      internalID: 8412708067802904589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_138
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b55a0915ac975c0800000000000000
+      internalID: -4217117124387841125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_139
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7653289b12b32ae90800000000000000
+      internalID: -7015980253457533593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_140
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640758b69b0016a90800000000000000
+      internalID: -7322570722754858938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_141
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 896
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7d13b434c0322e0800000000000000
+      internalID: -2151862713789065234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182db8c5219dbaeb0800000000000000
+      internalID: -4707430312600415615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_143
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0152feb7d4903a330800000000000000
+      internalID: 3720827945534563600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_144
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30554fd2c09638ac0800000000000000
+      internalID: -3854121355067501309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_145
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84adc7684f5d42d80800000000000000
+      internalID: -8276254968995063224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_146
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72d97494a205a3e0800000000000000
+      internalID: -2043223950053748102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_147
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3e565a1b514ba50800000000000000
+      internalID: 6535872811949745064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_148
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5796c4a9b6d9e2f90800000000000000
+      internalID: -6976465687274559115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_149
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 824
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9068e54a5380b4250800000000000000
+      internalID: 5929842360847336969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d910e77d523327080800000000000000
+      internalID: -9191227651887595107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_151
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86692be77ace3ecf0800000000000000
+      internalID: -224075352309066136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_152
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4b3a23944beb480800000000000000
+      internalID: -8881463188652837716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_153
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3212251db09cd1500800000000000000
+      internalID: 368671797107892515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_154
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069eee5b6d8487390800000000000000
+      internalID: -7820420665916331680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_155
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24109aa2fb105b4c0800000000000000
+      internalID: -4272506750924947134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_156
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b62505252c87fa0800000000000000
+      internalID: -5802674461076198560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_157
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 752
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dafe6486c2d8c40800000000000000
+      internalID: 5516113944977059077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_158
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa48b0aac5ab7320800000000000000
+      internalID: 2556819503161297570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_159
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c314e3e425860b270800000000000000
+      internalID: 8264220018934169916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_160
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c211e02e6673d3800800000000000000
+      internalID: 593691640901538092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_161
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3b5d61f985df7a0800000000000000
+      internalID: -6341815259961642049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_162
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ce7089545a5bfc0800000000000000
+      internalID: -3479693418751857558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_163
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4ad2daf590b8370800000000000000
+      internalID: 8325758642656486589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_164
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c587e699a103dd00800000000000000
+      internalID: 996141770471867841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_165
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 680
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d14eef99c82a6e0800000000000000
+      internalID: -1827743905724752568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_166
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48a1eae6a7d0c760800000000000000
+      internalID: 7476212493340223562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_167
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0718b59f27d2b8d0800000000000000
+      internalID: -2831964616287316210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_168
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f31e40ed0e2cdd10800000000000000
+      internalID: 2151645359108920305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_169
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d952d0c9af8d130800000000000000
+      internalID: 3591896250970381597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_170
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030948185c012ef90800000000000000
+      internalID: -6925954836474851280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_171
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f3dabf5715807f0800000000000000
+      internalID: -646176979352207475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_172
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f2c4033142982d0800000000000000
+      internalID: -3276047589102047364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_173
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 608
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caa3bd0cc8e54ad0800000000000000
+      internalID: -2718510836947375423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_174
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed892932d78bf0680800000000000000
+      internalID: -8786601500369315618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_175
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f25fa7a4e940e290800000000000000
+      internalID: -7863203702974229775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_176
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb5e0bf05ca5f7d0800000000000000
+      internalID: -2885210522451551258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_177
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9f1f4dfaf681320800000000000000
+      internalID: 2528893991751121373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_178
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88e55dd8099a3480800000000000000
+      internalID: -8918647848701663090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_179
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7141dfa4d639f00800000000000000
+      internalID: 1122360900986345433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_180
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488e4cd093c9824b0800000000000000
+      internalID: -5464946378956019580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_181
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 536
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f5fc2d1132aa420800000000000000
+      internalID: 2641962690864439064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b848b11ec04b32e60800000000000000
+      internalID: 7936384935766230155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_183
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61567d0c432611030800000000000000
+      internalID: 3463657567137785110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_184
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9e8c14f926d8600800000000000000
+      internalID: 472141972086778281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_185
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8685a6489a9cfd80800000000000000
+      internalID: -8215521641419667828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_186
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bfd86a0fcce02a0800000000000000
+      internalID: -6769247855932736731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_187
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f08295dc31490b0800000000000000
+      internalID: -5722927453796036760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_188
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9774b04d9d7bde540800000000000000
+      internalID: 5038885704290748281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_189
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 464
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28080654b331a1d0800000000000000
+      internalID: -3341332598901700565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05859ca9bd94157e0800000000000000
+      internalID: -1778559170291083184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_191
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9992fe833cd2b2d0800000000000000
+      internalID: -3264304665890481765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_192
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f890637b12caaba90800000000000000
+      internalID: -7297330985392797297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_193
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1306628bb2d2b00800000000000000
+      internalID: 805347978287002074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_194
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3afb9dec07e2e8a0800000000000000
+      internalID: -6277200887889003971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_195
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb52ba0396bc28e0800000000000000
+      internalID: -1716796615279092769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_196
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886e3751d234976a0800000000000000
+      internalID: -6451051130319018360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_197
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 392
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18a60da6e4ce77e0800000000000000
+      internalID: -1765757508858238948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_198
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fde1532e6f4b870800000000000000
+      internalID: 8697848231773527849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_199
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9593965c5adaba120800000000000000
+      internalID: 2426223751762360665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_200
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99317c14e1435050800000000000000
+      internalID: 5788042394086750622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_201
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e995886f48af98190800000000000000
+      internalID: -7959555417421882978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_202
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e04d4be0eee7bb0800000000000000
+      internalID: -4936246394620735918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_203
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190c0727c7c2437f0800000000000000
+      internalID: -633832734544838511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_204
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427f0b0a411d4d400800000000000000
+      internalID: 348132957739874084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_205
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 320
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c10efca4980fb50800000000000000
+      internalID: 6624946006270155897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_206
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fd1661e5a549650800000000000000
+      internalID: 6238710743963918127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_207
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904f22d9f24b2d4b0800000000000000
+      internalID: -5417069285180509175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_208
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383ccc5fbb7c7e450800000000000000
+      internalID: 6118078228902757251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_209
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04b3c310a51525b0800000000000000
+      internalID: -5393881201435757557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_210
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7362a0778f080d0800000000000000
+      internalID: -3422462526646503520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_211
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd072502725f9aa0800000000000000
+      internalID: -6152107916298613319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_212
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781fb8a1917d4ff50800000000000000
+      internalID: 6914387830740087175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_213
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 248
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6b2f2dcd7b643e0800000000000000
+      internalID: -2069764819670354203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_214
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c66f1862b1a0000800000000000000
+      internalID: 2844601970224133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_215
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb13dc43641a2630800000000000000
+      internalID: 3902954443793177595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_216
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9b712a1df555b50800000000000000
+      internalID: 6581271784444115369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_217
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3a843758d1431e0800000000000000
+      internalID: -2219116257384815641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_218
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7180bb8c90ec920800000000000000
+      internalID: 3012355958493419494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_219
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afebac441e0742d0800000000000000
+      internalID: -3294649122049757271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_220
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41acc3d41359ff180800000000000000
+      internalID: -9079374284773864940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_221
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 176
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe8469c37defe720800000000000000
+      internalID: 2877779768468868797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_222
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac7522603c21c3f0800000000000000
+      internalID: -882375465671230290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_223
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5fdd2417cb8b730800000000000000
+      internalID: 4015166262439966158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_224
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93d3935a3a172af0800000000000000
+      internalID: -421339202323229798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_225
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f73f4d6f7ea01ce0800000000000000
+      internalID: -1436456418813200400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_226
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48448c5077cdaee90800000000000000
+      internalID: -6995536667410414460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_227
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da821a2e29f081f0800000000000000
+      internalID: -1044561136880284973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_228
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d0d93fc6f0c9a10800000000000000
+      internalID: 1917424501971029393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_229
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 104
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9704669bcd8f9ef20800000000000000
+      internalID: 3452564216243175545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_230
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148489eb1b663c170800000000000000
+      internalID: 8197508660337330241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_231
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc687204a71444740800000000000000
+      internalID: 5135301468427355855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_232
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8d40ffd4dcb99c0800000000000000
+      internalID: -3919313315821201231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_233
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb91ef70017cdd10800000000000000
+      internalID: 2151718968935685044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_234
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4724697a4d59bc9b0800000000000000
+      internalID: -5058785015843372428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_235
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435d27014abccbc70800000000000000
+      internalID: 8988282861835703604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_236
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6660ab7f9b080c0800000000000000
+      internalID: -4575452747779381600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nautical_spritesheet_237
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 32
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30f1a733b1ca9f50800000000000000
+      internalID: 6889031555493261370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
