@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Health : PlatformerSystem
+{
+
+    public delegate void OnDeath();
+    public OnDeath _deathMethod;
+    private Creatures _owner;
+    [SerializeField] private float _maxHealth;
+    private float _currentHealth;
+    public float MaxHealth { get { return _maxHealth; } }
+    public float CurrentHealth { get { return _currentHealth; } }
+
+    void Awake()
+    {
+        _owner = GetComponent<Creatures>();
+        _currentHealth = _maxHealth;
+    }
+
+    public void RegisterDeathMethod(OnDeath method)
+    {
+        _deathMethod = method;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (_currentHealth - damage <= 0f)
+        {
+            _currentHealth = 0f;
+            _deathMethod();
+
+        }
+        else
+        {
+            _currentHealth -= damage;
+        }
+    }
+}

@@ -5,25 +5,22 @@ using UnityEngine;
 public class Player : Creatures
 {
 
+    [SerializeField] private GameObject _meleeAttackObject;
+    private MeleeAttack _meleeAttack;
 
-
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        _body = GetComponent<Rigidbody2D>();
-        _falling = false;
-        _canAttack = true;
-        _canJump = true;
-        _deltaAttack = 0f;
-        _fallMultipler = 2.5f;
+        _meleeAttack = _meleeAttackObject.GetComponent<MeleeAttack>();
     }
+
+    // Start is called before the first frame update 
 
     // Update is called once per frame
     void Update()
     {
         if (_body.velocity.y < -0.5f)
         {
-            _body.velocity += Vector2.up * Physics2D.gravity * (_fallMultipler - 1) * Time.deltaTime;
+            _body.velocity += (Vector2.up * Physics2D.gravity * (_fallMultipler - 1) * Time.deltaTime) * _body.mass;
             _falling = true;
             _canJump = false;
             Debug.Log("Now falling");
@@ -37,29 +34,24 @@ public class Player : Creatures
         }
         if (_direction != Vector2.zero)
         {
-            _body.AddForce(_direction * _movementSpeed);
+            _body.AddForce(_direction * _movementSpeed * _body.mass);
             if (_direction.x > 0)
             {
                 _facing = Vector2.right;
+
             }
             else if (_direction.x < 0)
             {
                 _facing = Vector2.left;
             }
         }
+
+        _meleeAttack.transform.localPosition = new Vector3(_facing.x * .8f, 0f, 0f);
         if (transform.position.y <= -30)
         {
             transform.position = new Vector3(-6, -2, 0);
         }
-        if (!_canAttack)
-        {
-            _deltaAttack += Time.deltaTime;
-            if (_deltaAttack >= _attackSpeed)
-            {
-                _canAttack = true;
-                _deltaAttack = 0f;
-            }
-        }
+
     }
 
     public void Jump()
@@ -75,14 +67,25 @@ public class Player : Creatures
         _body.velocity = new Vector2(_body.velocity.x / 2, _body.velocity.y);
     }
 
+    IEnumerator Attacking()
+    {
+        _attacking = true;
+        _canAttack = false;
+        yield return new WaitForSeconds(.5f);
+        _attacking = false;
+        _canAttack = true;
+
+    }
+
+
     public void Attack()
     {
-        GameObject _processAttack = new GameObject();
-        _processAttack.transform.parent = gameObject.transform;
-        _processAttack.transform.localPosition = _facing * 2f;
         Debug.Log("Process attack");
         _canAttack = false;
-        _deltaAttack = 0f;
+        StartCoroutine(Attacking());
+        _meleeAttack.Attack();
+        Debug.Log("Coroutine done");
+
     }
     public void Move(Vector2 dir)
     {

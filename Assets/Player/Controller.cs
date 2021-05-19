@@ -36,11 +36,8 @@ public class Controller : PlatformerSystem
         var dir = context.ReadValue<Vector2>();
         _player.Move(new Vector2(dir.x, 0));
 
-        Debug.Log("AA");
-        Debug.Log(_player.Falling + " ---- " + _player.CanJump);
         if (!_player.Falling && _player.CanJump && dir.y > 0f)
         {
-            Debug.Log("A");
             _player.Jump();
         }
         if (context.canceled && _player.Body.velocity.x != 0)
