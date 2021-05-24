@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Health))]
 public abstract class Creatures : PlatformerSystem
 {
 
+    public LayerMask collisionMask;
     [SerializeField] protected float _movementSpeed;
     [SerializeField] protected float _attackSpeed;
     [SerializeField] protected float _jumpPower;
@@ -28,17 +31,33 @@ public abstract class Creatures : PlatformerSystem
     public bool CanJump { get { return _canJump; } }
     public bool Falling { get { return _falling; } }
     protected Vector2 _direction;
-    protected CapsuleCollider2D _attackCollider;
     public Vector2 Direction { get { return _direction; } set { _direction = value; } }
     protected BoxCollider2D _hitBox;
     protected float _fallMultipler;
-    // Start is called before the first frame update
+    [SerializeField] private GameObject _meleeAttackObject;
+    protected MeleeAttack _meleeAttack;
+    private SpriteRenderer _renderer;
+    private BoxCollider2D _collider;
+    private RaycastOrigins raycastOrigins;
+    protected CollisionInfo _collisions;
+    float maxClimbSlope = 80f;
+    float maxDescendAngle = 75f;
+    public CollisionInfo Collisions { get { return _collisions; } }
+    private const float skinWidth = .015f;
+    private int horizontalRayCount = 4;
+    private int verticalRayCount = 4;
+    private float horizontalRaySpacing;
+    private float verticleRaySpacing;
+
     void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
+        _meleeAttack = _meleeAttackObject.GetComponent<MeleeAttack>();
+        _collider = GetComponent<BoxCollider2D>();
         _falling = false;
         _canAttack = true;
-        _attackCollider = gameObject.GetComponent<CapsuleCollider2D>();
+        _renderer = GetComponent<SpriteRenderer>();
+        _collisions = new CollisionInfo();
         _hitBox = gameObject.GetComponent<BoxCollider2D>();
         _ignoreHit = new Dictionary<Creatures, float>();
         _canJump = true;
@@ -47,18 +66,238 @@ public abstract class Creatures : PlatformerSystem
         _facing = Vector2.right;
         _health = GetComponent<Health>();
         _health.RegisterDeathMethod(OnDeath);
+        CalculateRaySpacing();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Move(Vector3 velocity)
     {
 
+        UpdateRaycastOrigins();
+        _collisions.Reset();
+        _collisions.velocityOld = velocity;
+        if (velocity.y < 0)
+        {
+            DescendSlope(ref velocity);
+        }
+        if (velocity.x != 0f)
+        {
+            HorizontalCollisions(ref velocity);
+        }
+        if (velocity.y != 0f)
+        {
+            VerticleCollisions(ref velocity);
+        }
+        transform.Translate(velocity);
     }
 
     protected void OnDeath()
     {
         Debug.Log("We died.");
         Destroy(gameObject);
+    }
+
+    private void HorizontalCollisions(ref Vector3 velocity)
+    {
+        float dirX = Mathf.Sign(velocity.x);
+        float rayLength = Mathf.Abs(velocity.x) + skinWidth;
+        for (int i = 0; i < horizontalRayCount; i++)
+        {
+            Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
+            rayOrigin += Vector2.up * (horizontalRaySpacing * i);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * dirX, rayLength, collisionMask);
+
+            Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.blue);
+            if (hit)
+            {
+                float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+                if (i == 0 && slopeAngle <= maxClimbSlope)
+                {
+                    if (_collisions.descendingSlope)
+                    {
+                        _collisions.descendingSlope = false;
+                        velocity = _collisions.velocityOld;
+                    }
+                    float distanceToSlopeStart = 0f;
+                    if (slopeAngle != _collisions.slopeAngleOld)
+                    {
+                        distanceToSlopeStart = hit.distance - skinWidth;
+                        velocity.x -= distanceToSlopeStart * dirX;
+                    }
+                    ClimbSlope(ref velocity, slopeAngle);
+                    velocity.x += distanceToSlopeStart * dirX;
+                    Debug.Log("Climb slope");
+                }
+                Debug.Log("Hit something!");
+                Debug.Log(slopeAngle);
+                if (!_collisions.climbingSlope || slopeAngle > maxClimbSlope)
+                {
+                    velocity.x = (hit.distance - skinWidth) * dirX;
+                    rayLength = hit.distance;
+
+                    if (_collisions.climbingSlope)
+                    {
+                        velocity.y = Mathf.Tan(_collisions.slopeAngle * Mathf.Deg2Rad * Mathf.Abs(velocity.x));
+                    }
+
+                    _collisions.left = dirX == -1;
+                    _collisions.right = dirX == 1;
+                }
+            }
+        }
+    }
+    private void VerticleCollisions(ref Vector3 velocity)
+    {
+        float dirY = Mathf.Sign(velocity.y);
+        float rayLength = Mathf.Abs(velocity.y) + skinWidth;
+        for (int i = 0; i < verticalRayCount; i++)
+        {
+            Vector2 rayOrigin = (dirY == -1) ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
+            rayOrigin += Vector2.right * (verticleRaySpacing * i + velocity.x);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * dirY, rayLength, collisionMask);
+            Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.red);
+            if (hit)
+            {
+                velocity.y = (hit.distance - skinWidth) * dirY;
+                rayLength = hit.distance;
+
+                if (_collisions.climbingSlope)
+                {
+                    velocity.x = velocity.y / Mathf.Tan(_collisions.slopeAngle * Mathf.Deg2Rad) * Mathf.Sign(velocity.x);
+                }
+
+                _collisions.below = dirY == -1;
+                _collisions.above = dirY == 1;
+            }
+        }
+        if (_collisions.climbingSlope)
+        {
+            float directionX = Mathf.Sign(velocity.x);
+            rayLength = Mathf.Abs(velocity.x) + skinWidth;
+            Vector2 rayOrigin = ((directionX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight) + Vector2.up * velocity.y;
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
+            if (hit)
+            {
+                float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+                if (slopeAngle != _collisions.slopeAngle)
+                {
+                    velocity.x = (hit.distance - skinWidth) * directionX;
+                    _collisions.slopeAngle = slopeAngle;
+                }
+            }
+
+        }
+    }
+
+
+    private void ClimbSlope(ref Vector3 velocity, float SlopeAngle)
+    {
+        float moveDistance = Mathf.Abs(velocity.x);
+        float climbVelocityY = Mathf.Sin(SlopeAngle * Mathf.Deg2Rad) * moveDistance;
+        if (velocity.y <= climbVelocityY)
+        {
+            velocity.y = climbVelocityY;
+            velocity.x = Mathf.Cos(SlopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x);
+            _collisions.below = true;
+            _collisions.climbingSlope = true;
+            _collisions.slopeAngle = SlopeAngle;
+        }
+    }
+
+    private void DescendSlope(ref Vector3 velocity)
+    {
+        float dirX = Mathf.Sign(velocity.x);
+        Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft;
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, -Vector2.up, Mathf.Infinity, collisionMask);
+        if (hit)
+        {
+
+            float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+            if (slopeAngle != 0 && slopeAngle <= maxDescendAngle)
+            {
+                if (Mathf.Sign(hit.normal.x) == dirX)
+                {
+                    if (hit.distance - skinWidth <= Mathf.Tan(slopeAngle * Mathf.Deg2Rad * Mathf.Abs(velocity.x)))
+                    {
+                        float moveDistance = Mathf.Abs(velocity.x);
+                        float descendVelocityY = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance;
+                        velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x);
+                        velocity.y -= descendVelocityY;
+
+                        _collisions.slopeAngle = slopeAngle;
+                        _collisions.descendingSlope = true;
+                        _collisions.below = true;
+                    }
+                }
+            }
+        }
+    }
+    private void UpdateRaycastOrigins()
+    {
+        Bounds bounds = _collider.bounds;
+        bounds.Expand(skinWidth * -2);
+
+        raycastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
+        raycastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
+        raycastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
+        raycastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
+
+    }
+
+    private struct RaycastOrigins
+    {
+        public Vector2 topLeft, topRight;
+        public Vector2 bottomLeft, bottomRight;
+    }
+
+    private void CalculateRaySpacing()
+    {
+        Bounds bounds = _collider.bounds;
+        bounds.Expand(skinWidth * -2);
+        horizontalRayCount = Mathf.Clamp(horizontalRayCount, 2, int.MaxValue);
+        verticalRayCount = Mathf.Clamp(verticalRayCount, 2, int.MaxValue);
+
+        horizontalRaySpacing = bounds.size.y / (horizontalRayCount - 1);
+        verticleRaySpacing = bounds.size.x / (verticalRayCount - 1);
+    }
+    public struct CollisionInfo
+    {
+        public bool above, below;
+        public bool left, right;
+
+        public bool climbingSlope, descendingSlope;
+        public Vector3 velocityOld;
+        public float slopeAngle, slopeAngleOld;
+
+        public void Reset()
+        {
+            above = below = false;
+            left = right = false;
+            climbingSlope = false;
+            descendingSlope = false;
+
+            slopeAngleOld = slopeAngle;
+            slopeAngle = 0;
+        }
+    }
+    IEnumerator Attacking()
+    {
+        _attacking = true;
+        _canAttack = false;
+        yield return new WaitForSeconds(.5f);
+        _attacking = false;
+        _canAttack = true;
+
+    }
+
+
+    public void Attack()
+    {
+        Debug.Log("Process attack");
+        _canAttack = false;
+        StartCoroutine(Attacking());
+        _meleeAttack.Attack();
+        Debug.Log("Coroutine done");
+
     }
 
 }
