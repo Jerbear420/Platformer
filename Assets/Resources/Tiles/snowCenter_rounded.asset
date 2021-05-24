@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: snowCenter_rounded
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: f9c9eabfbf6cee642bafe03b52afc236, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 928d7e295aa441345b348c14bba2083f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

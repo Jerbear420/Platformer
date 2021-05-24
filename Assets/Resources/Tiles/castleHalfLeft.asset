@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: castleHalfLeft
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 7c180b6104bd7cd48b1ea66f401f5b6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ebcd0a561eb9304b9b4f5b2dbb4dd3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

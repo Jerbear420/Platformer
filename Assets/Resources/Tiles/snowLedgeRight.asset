@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: snowLedgeRight
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 010f1e6ce5558494fa6835a9c7ef86e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7122d90733b4a014088af33ec41c9c6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: ropeAttached
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 43f9fb1a1ee7d804babde779eebd9201, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 360e474a9e5d28d418f3925e06e25a7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

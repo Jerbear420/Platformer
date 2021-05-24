@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: stoneCliffRight
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 30a195f1f898c1d4bb16fdca8532579d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f268613434d10843a67e44d011cb8b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

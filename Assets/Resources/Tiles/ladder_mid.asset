@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: ladder_mid
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: af01bf5abec930740a4e68433402590f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 383c0a6eee2ad4248990549c5ef12bce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

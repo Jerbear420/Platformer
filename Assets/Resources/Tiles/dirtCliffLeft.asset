@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: dirtCliffLeft
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 9de4e71364e2be840ae0948c387e6c24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 558f23f9f77c3364a8a30b9f707c4e60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

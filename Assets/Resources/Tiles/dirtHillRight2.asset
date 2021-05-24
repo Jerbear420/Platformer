@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: dirtHillRight2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: bf477c37c1a1e8b469f42e993d6d76a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71ff6bc53ad9cf1408eccc75e40742dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
