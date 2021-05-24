@@ -7,8 +7,9 @@ public class HostileHandler : Creatures
     private Creatures _target;
     private int _status; //1 = wander, 2 = follow & attack
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
+        base.Start();
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Creatures>();
         _status = 1;
         _facing = Vector2.right;

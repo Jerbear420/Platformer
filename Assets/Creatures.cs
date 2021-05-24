@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Health))]
-public abstract class Creatures : PlatformerSystem
+public abstract class Creatures : RaycastController
 {
 
-    public LayerMask collisionMask;
     [SerializeField] protected float _movementSpeed;
     [SerializeField] protected float _attackSpeed;
     [SerializeField] protected float _jumpPower;
@@ -37,23 +35,15 @@ public abstract class Creatures : PlatformerSystem
     [SerializeField] private GameObject _meleeAttackObject;
     protected MeleeAttack _meleeAttack;
     private SpriteRenderer _renderer;
-    private BoxCollider2D _collider;
-    private RaycastOrigins raycastOrigins;
-    protected CollisionInfo _collisions;
     float maxClimbSlope = 80f;
     float maxDescendAngle = 75f;
+    protected CollisionInfo _collisions;
     public CollisionInfo Collisions { get { return _collisions; } }
-    private const float skinWidth = .015f;
-    private int horizontalRayCount = 4;
-    private int verticalRayCount = 4;
-    private float horizontalRaySpacing;
-    private float verticleRaySpacing;
 
     void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
         _meleeAttack = _meleeAttackObject.GetComponent<MeleeAttack>();
-        _collider = GetComponent<BoxCollider2D>();
         _falling = false;
         _canAttack = true;
         _renderer = GetComponent<SpriteRenderer>();
@@ -66,10 +56,9 @@ public abstract class Creatures : PlatformerSystem
         _facing = Vector2.right;
         _health = GetComponent<Health>();
         _health.RegisterDeathMethod(OnDeath);
-        CalculateRaySpacing();
     }
 
-    public void Move(Vector3 velocity)
+    public void Move(Vector3 velocity, bool standingOnPlatform = false)
     {
 
         UpdateRaycastOrigins();
@@ -88,6 +77,10 @@ public abstract class Creatures : PlatformerSystem
             VerticleCollisions(ref velocity);
         }
         transform.Translate(velocity);
+        if (standingOnPlatform)
+        {
+            _collisions.below = true;
+        }
     }
 
     protected void OnDeath()
@@ -109,6 +102,10 @@ public abstract class Creatures : PlatformerSystem
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.blue);
             if (hit)
             {
+                if (hit.distance == 0)
+                {
+                    continue;
+                }
                 float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
                 if (i == 0 && slopeAngle <= maxClimbSlope)
                 {
@@ -229,54 +226,6 @@ public abstract class Creatures : PlatformerSystem
                     }
                 }
             }
-        }
-    }
-    private void UpdateRaycastOrigins()
-    {
-        Bounds bounds = _collider.bounds;
-        bounds.Expand(skinWidth * -2);
-
-        raycastOrigins.bottomLeft = new Vector2(bounds.min.x, bounds.min.y);
-        raycastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
-        raycastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
-        raycastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
-
-    }
-
-    private struct RaycastOrigins
-    {
-        public Vector2 topLeft, topRight;
-        public Vector2 bottomLeft, bottomRight;
-    }
-
-    private void CalculateRaySpacing()
-    {
-        Bounds bounds = _collider.bounds;
-        bounds.Expand(skinWidth * -2);
-        horizontalRayCount = Mathf.Clamp(horizontalRayCount, 2, int.MaxValue);
-        verticalRayCount = Mathf.Clamp(verticalRayCount, 2, int.MaxValue);
-
-        horizontalRaySpacing = bounds.size.y / (horizontalRayCount - 1);
-        verticleRaySpacing = bounds.size.x / (verticalRayCount - 1);
-    }
-    public struct CollisionInfo
-    {
-        public bool above, below;
-        public bool left, right;
-
-        public bool climbingSlope, descendingSlope;
-        public Vector3 velocityOld;
-        public float slopeAngle, slopeAngleOld;
-
-        public void Reset()
-        {
-            above = below = false;
-            left = right = false;
-            climbingSlope = false;
-            descendingSlope = false;
-
-            slopeAngleOld = slopeAngle;
-            slopeAngle = 0;
         }
     }
     IEnumerator Attacking()
