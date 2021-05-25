@@ -42,10 +42,10 @@ public class Controller : PlatformerSystem
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
-        if (_player.Collisions.above || _player.Collisions.below)
+        if (_player._collisions.above || _player._collisions.below)
         {
             _velocity.y = 0;
         }
@@ -55,7 +55,7 @@ public class Controller : PlatformerSystem
             jump = false;
         }
         float targetVelocityX = _direction.x * _player.MovementSpeed;
-        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_player.Collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
+        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_player._collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
         _velocity.y += _gravity * Time.deltaTime;
         _player.Move(_velocity * Time.deltaTime);
     }
@@ -65,7 +65,7 @@ public class Controller : PlatformerSystem
         var dir = context.ReadValue<Vector2>();
         _direction = dir;
 
-        if (_player.Collisions.below && dir.y > 0f)
+        if (_player._collisions.below && dir.y > 0f)
         {
             Debug.Log("Jump!");
             jump = true;

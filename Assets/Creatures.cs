@@ -37,8 +37,7 @@ public abstract class Creatures : RaycastController
     private SpriteRenderer _renderer;
     float maxClimbSlope = 80f;
     float maxDescendAngle = 75f;
-    protected CollisionInfo _collisions;
-    public CollisionInfo Collisions { get { return _collisions; } }
+    public CollisionInfo _collisions;
 
     void Awake()
     {
