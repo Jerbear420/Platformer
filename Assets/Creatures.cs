@@ -10,6 +10,11 @@ public abstract class Creatures : RaycastController
     [SerializeField] protected float _attackSpeed;
     [SerializeField] protected float _jumpPower;
     [SerializeField] protected bool _hostile;
+
+    public Vector2 wallJumpClimb;
+    public Vector2 wallJumpOff;
+    public Vector2 wallLeap;
+
     protected bool _canAttack;
     protected bool _attacking;
     protected Vector2 _facing = Vector2.zero; //0 = right, 1 = left, 2 = up, 3 = down 
@@ -55,6 +60,7 @@ public abstract class Creatures : RaycastController
         _facing = Vector2.right;
         _health = GetComponent<Health>();
         _health.RegisterDeathMethod(OnDeath);
+        _collisions.faceDir = 1;
     }
 
     public void Move(Vector3 velocity, bool standingOnPlatform = false)
@@ -63,14 +69,16 @@ public abstract class Creatures : RaycastController
         UpdateRaycastOrigins();
         _collisions.Reset();
         _collisions.velocityOld = velocity;
+        if (velocity.x != 0)
+        {
+
+            _collisions.faceDir = (int)Mathf.Sign(velocity.x);
+        }
         if (velocity.y < 0)
         {
             DescendSlope(ref velocity);
         }
-        if (velocity.x != 0f)
-        {
-            HorizontalCollisions(ref velocity);
-        }
+        HorizontalCollisions(ref velocity);
         if (velocity.y != 0f)
         {
             VerticleCollisions(ref velocity);
@@ -90,8 +98,13 @@ public abstract class Creatures : RaycastController
 
     private void HorizontalCollisions(ref Vector3 velocity)
     {
-        float dirX = Mathf.Sign(velocity.x);
+        float dirX = _collisions.faceDir;
         float rayLength = Mathf.Abs(velocity.x) + skinWidth;
+
+        if (Mathf.Abs(velocity.x) < skinWidth)
+        {
+            rayLength = 2 * skinWidth;
+        }
         for (int i = 0; i < horizontalRayCount; i++)
         {
             Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
@@ -121,10 +134,7 @@ public abstract class Creatures : RaycastController
                     }
                     ClimbSlope(ref velocity, slopeAngle);
                     velocity.x += distanceToSlopeStart * dirX;
-                    Debug.Log("Climb slope");
                 }
-                Debug.Log("Hit something!");
-                Debug.Log(slopeAngle);
                 if (!_collisions.climbingSlope || slopeAngle > maxClimbSlope)
                 {
                     velocity.x = (hit.distance - skinWidth) * dirX;

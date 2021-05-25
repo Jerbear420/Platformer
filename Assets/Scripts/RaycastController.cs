@@ -25,13 +25,9 @@ public class RaycastController : PlatformerSystem
     {
         _collider = GetComponent<BoxCollider2D>();
         CalculateRaySpacing();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
+
     public void UpdateRaycastOrigins()
     {
         Bounds bounds = _collider.bounds;
@@ -68,6 +64,7 @@ public class RaycastController : PlatformerSystem
         public bool climbingSlope, descendingSlope;
         public Vector3 velocityOld;
         public float slopeAngle, slopeAngleOld;
+        public int faceDir;
 
         public void Reset()
         {

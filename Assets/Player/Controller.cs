@@ -10,6 +10,7 @@ public class Controller : PlatformerSystem
     private InputAction _movement;
 
     private InputAction _attack;
+    private InputAction _jumpAction;
     [SerializeField] private InputActionAsset _playerControls;
     private Vector2 _direction;
     private Vector3 _velocity;
@@ -19,18 +20,22 @@ public class Controller : PlatformerSystem
     float accelerationTimeGround = .1f;
     float _timeToJumpApex = .4f;
     private bool jump;
-
+    public float wallSlideSpeedMax = 3;
     protected float _jumpVelocity;
     private float _gravity;
     private float velocityXSmoothing;
+    public float wallStickTime = .25f;
+    float timeToWallUnstick;
     void Start()
     {
         var gap = _playerControls.FindActionMap("Movement");
         _movement = gap.FindAction("Move");
         _attack = gap.FindAction("Attack");
+        _jumpAction = gap.FindAction("Jump");
         _player = GetComponent<Player>();
         _movement.performed += OnMovementChanged;
         _attack.performed += ctx => OnAttack(ctx);
+        _jumpAction.performed += cttx => OnJump(cttx);
         jump = false;
         _gravity = -(2 * _player.JumpPower) / Mathf.Pow(_timeToJumpApex, 2);
         _jumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
@@ -45,17 +50,71 @@ public class Controller : PlatformerSystem
     void FixedUpdate()
     {
 
+        bool wallSliding = false;
+        int wallDirX = (_player._collisions.left) ? -1 : 1;
+        float targetVelocityX = _direction.x * _player.MovementSpeed;
+        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_player._collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
+
+        if ((_player._collisions.left || _player._collisions.right) && !_player._collisions.below && _velocity.y < 0)
+        {
+            wallSliding = true;
+            if (_velocity.y < -wallSlideSpeedMax)
+            {
+                _velocity.y = -wallSlideSpeedMax;
+            }
+            if (timeToWallUnstick > 0)
+            {
+                _velocity.x = 0;
+                if (_direction.x != wallDirX && _direction.x != 0)
+                {
+                    timeToWallUnstick -= Time.deltaTime;
+                }
+                else
+                {
+                    timeToWallUnstick = wallStickTime;
+                }
+            }
+            else
+            {
+                timeToWallUnstick = wallStickTime;
+            }
+        }
+
         if (_player._collisions.above || _player._collisions.below)
         {
+            velocityXSmoothing = 0;
             _velocity.y = 0;
         }
         if (jump)
         {
-            _velocity.y = _jumpVelocity;
-            jump = false;
+            if (wallSliding)
+            {
+                Debug.Log("Sliding!");
+                if (wallDirX == _direction.x)
+                {
+                    _velocity.x = -wallDirX * _player.wallJumpClimb.x;
+                    _velocity.y = _player.wallJumpClimb.y;
+                    jump = false;
+                }
+                else if (_direction.x == 0)
+                {
+                    _velocity.x = -wallDirX * _player.wallJumpOff.x;
+                    _velocity.y = _player.wallJumpOff.y;
+                    jump = false;
+                }
+                else
+                {
+                    _velocity.x = -wallDirX * _player.wallLeap.x;
+                    _velocity.y = _player.wallLeap.y;
+                    jump = false;
+                }
+            }
+            if (_player._collisions.below)
+            {
+                _velocity.y = _jumpVelocity;
+                jump = false;
+            }
         }
-        float targetVelocityX = _direction.x * _player.MovementSpeed;
-        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_player._collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
         _velocity.y += _gravity * Time.deltaTime;
         _player.Move(_velocity * Time.deltaTime);
     }
@@ -65,10 +124,10 @@ public class Controller : PlatformerSystem
         var dir = context.ReadValue<Vector2>();
         _direction = dir;
 
-        if (_player._collisions.below && dir.y > 0f)
+        if (dir.y > 0f)
         {
             Debug.Log("Jump!");
-            jump = true;
+            //jump = true;
         }
 
         /*  if (!_player.Falling && _player.CanJump && dir.y > 0f)
@@ -97,6 +156,14 @@ public class Controller : PlatformerSystem
             Debug.Log("Cant attack yet!");
         }
 
+    }
+    private void OnJump(InputAction.CallbackContext context)
+    {
+
+        if (!jump)
+        {
+            jump = true;
+        }
     }
 
 }
