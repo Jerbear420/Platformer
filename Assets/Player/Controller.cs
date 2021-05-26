@@ -11,6 +11,7 @@ public class Controller : PlatformerSystem
 
     private InputAction _attack;
     private InputAction _jumpAction;
+    private InputAction _downAction;
     [SerializeField] private InputActionAsset _playerControls;
     private Vector2 _direction;
     private Vector3 _velocity;
@@ -20,8 +21,10 @@ public class Controller : PlatformerSystem
     float accelerationTimeGround = .1f;
     float _timeToJumpApex = .4f;
     private bool jump;
+    public bool fallThrough;
     public float wallSlideSpeedMax = 3;
-    protected float _jumpVelocity;
+    protected float _maxJumpVelocity;
+    protected float _minJumpVelocity;
     private float _gravity;
     private float velocityXSmoothing;
     public float wallStickTime = .25f;
@@ -32,16 +35,21 @@ public class Controller : PlatformerSystem
         _movement = gap.FindAction("Move");
         _attack = gap.FindAction("Attack");
         _jumpAction = gap.FindAction("Jump");
+        _downAction = gap.FindAction("Down");
         _player = GetComponent<Player>();
         _movement.performed += OnMovementChanged;
         _attack.performed += ctx => OnAttack(ctx);
         _jumpAction.performed += cttx => OnJump(cttx);
+        _downAction.performed += dtx => OnDown(dtx);
         jump = false;
-        _gravity = -(2 * _player.JumpPower) / Mathf.Pow(_timeToJumpApex, 2);
-        _jumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
+        _gravity = -(2 * _player.MaxJumpPower) / Mathf.Pow(_timeToJumpApex, 2);
+        _maxJumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
+        _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * _player.minJumpPower);
         Debug.Log("Gravity" + _gravity);
-        Debug.Log("JumpVelocity" + _jumpVelocity);
+        Debug.Log("JumpVelocity" + _maxJumpVelocity);
         _movement.canceled += OnMovementChanged;
+        _jumpAction.canceled += ctftx => OnJump(ctftx);
+        _downAction.canceled += dtx => OnDown(dtx);
         _direction = Vector2.zero;
         _velocity = Vector2.zero;
     }
@@ -80,11 +88,7 @@ public class Controller : PlatformerSystem
             }
         }
 
-        if (_player._collisions.above || _player._collisions.below)
-        {
-            velocityXSmoothing = 0;
-            _velocity.y = 0;
-        }
+
         if (jump)
         {
             if (wallSliding)
@@ -111,12 +115,17 @@ public class Controller : PlatformerSystem
             }
             if (_player._collisions.below)
             {
-                _velocity.y = _jumpVelocity;
+                _velocity.y = _maxJumpVelocity;
                 jump = false;
             }
         }
         _velocity.y += _gravity * Time.deltaTime;
         _player.Move(_velocity * Time.deltaTime);
+        if (_player._collisions.above || _player._collisions.below)
+        {
+            velocityXSmoothing = 0;
+            _velocity.y = 0;
+        }
     }
 
     private void OnMovementChanged(InputAction.CallbackContext context)
@@ -159,11 +168,35 @@ public class Controller : PlatformerSystem
     }
     private void OnJump(InputAction.CallbackContext context)
     {
-
-        if (!jump)
+        Debug.Log("Jump called");
+        if (context.performed)
         {
-            jump = true;
+            if (!jump)
+            {
+                jump = true;
+            }
+        }
+        if (context.canceled)
+        {
+            Debug.Log("Released jump");
+            if (_velocity.y > _minJumpVelocity)
+            {
+                Debug.Log("Velocity is higher than jump velocity");
+                _velocity.y = _minJumpVelocity;
+            }
         }
     }
-
+    private void OnDown(InputAction.CallbackContext context)
+    {
+        Debug.Log("down called");
+        if (context.performed)
+        {
+            _player.FallThrough = true;
+        }
+        if (context.canceled)
+        {
+            Debug.Log("Released down");
+            _player.FallThrough = false;
+        }
+    }
 }
