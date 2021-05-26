@@ -14,7 +14,7 @@ public class Controller : PlatformerSystem
     private InputAction _downAction;
     [SerializeField] private InputActionAsset _playerControls;
     private Vector2 _direction;
-    private Vector3 _velocity;
+    private Vector2 _velocity;
     private Player _player;
     private Vector2 jumpVelocity;
     float accelerationTimeAirborn = .2f;
@@ -44,7 +44,7 @@ public class Controller : PlatformerSystem
         jump = false;
         _gravity = -(2 * _player.MaxJumpPower) / Mathf.Pow(_timeToJumpApex, 2);
         _maxJumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
-        _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * _player.minJumpPower);
+        _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * _player.MinJumpPower);
         Debug.Log("Gravity" + _gravity);
         Debug.Log("JumpVelocity" + _maxJumpVelocity);
         _movement.canceled += OnMovementChanged;
@@ -96,20 +96,20 @@ public class Controller : PlatformerSystem
                 Debug.Log("Sliding!");
                 if (wallDirX == _direction.x)
                 {
-                    _velocity.x = -wallDirX * _player.wallJumpClimb.x;
-                    _velocity.y = _player.wallJumpClimb.y;
+                    _velocity.x = -wallDirX * _player.WallJumpClimb.x;
+                    _velocity.y = _player.WallJumpClimb.y;
                     jump = false;
                 }
                 else if (_direction.x == 0)
                 {
-                    _velocity.x = -wallDirX * _player.wallJumpOff.x;
-                    _velocity.y = _player.wallJumpOff.y;
+                    _velocity.x = -wallDirX * _player.WallJumpOff.x;
+                    _velocity.y = _player.WallJumpOff.y;
                     jump = false;
                 }
                 else
                 {
-                    _velocity.x = -wallDirX * _player.wallLeap.x;
-                    _velocity.y = _player.wallLeap.y;
+                    _velocity.x = -wallDirX * _player.WallLeap.x;
+                    _velocity.y = _player.WallLeap.y;
                     jump = false;
                 }
             }

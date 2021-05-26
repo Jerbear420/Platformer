@@ -2,6 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public interface IRaycast
+{
+    BoxCollider2D _collider { get; set; }
+    void UpdateRaycastOrigins();
+    float horizontalRaySpacing { get; }
+    float verticalRaySpacing { get; }
+    float horizontalRayCount { get; }
+    float verticalRayCount { get; }
+}
 [RequireComponent(typeof(BoxCollider2D))]
 public class RaycastController : PlatformerSystem
 {

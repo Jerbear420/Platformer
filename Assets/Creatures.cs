@@ -11,17 +11,19 @@ public abstract class Creatures : RaycastController
     [SerializeField] protected float _maxJumpPower;
     [SerializeField] protected bool _hostile;
 
-    public float minJumpPower;
+    protected float minJumpPower;
+    public float MinJumpPower { get { return minJumpPower; } }
 
-    public Vector2 wallJumpClimb;
-    public Vector2 wallJumpOff;
-    public Vector2 wallLeap;
+    //Jump data
+    protected Vector2 wallJumpClimb;
+    protected Vector2 wallJumpOff;
+    protected Vector2 wallLeap;
+    public Vector2 WallJumpClimb { get { return wallJumpClimb; } }
+    public Vector2 WallJumpOff { get { return wallJumpOff; } }
+    public Vector2 WallLeap { get { return wallLeap; } }
 
     protected bool _canAttack;
     protected bool _attacking;
-    protected Vector2 _facing = Vector2.zero; //0 = right, 1 = left, 2 = up, 3 = down 
-    public Vector2 GetFacing { get { return _facing; } }
-    public Vector2 SetFacing { set { _facing = value; } }
     public bool CanAttack { get { return _canAttack; } }
     protected Rigidbody2D _body;
     protected Dictionary<Creatures, float> _ignoreHit;
@@ -61,13 +63,12 @@ public abstract class Creatures : RaycastController
         _canJump = true;
         _fallMultipler = 2.5f;
         _attacking = false;
-        _facing = Vector2.right;
         _health = GetComponent<Health>();
         _health.RegisterDeathMethod(OnDeath);
         _collisions.faceDir = 1;
     }
 
-    public void Move(Vector3 velocity, bool standingOnPlatform = false)
+    public void Move(Vector2 velocity, bool standingOnPlatform = false)
     {
 
         UpdateRaycastOrigins();
@@ -100,7 +101,7 @@ public abstract class Creatures : RaycastController
         Destroy(gameObject);
     }
 
-    private void HorizontalCollisions(ref Vector3 velocity)
+    private void HorizontalCollisions(ref Vector2 velocity)
     {
         float dirX = _collisions.faceDir;
         float rayLength = Mathf.Abs(velocity.x) + skinWidth;
@@ -155,7 +156,7 @@ public abstract class Creatures : RaycastController
             }
         }
     }
-    private void VerticleCollisions(ref Vector3 velocity)
+    private void VerticleCollisions(ref Vector2 velocity)
     {
         float dirY = Mathf.Sign(velocity.y);
         float rayLength = Mathf.Abs(velocity.y) + skinWidth;
@@ -212,7 +213,7 @@ public abstract class Creatures : RaycastController
     }
 
 
-    private void ClimbSlope(ref Vector3 velocity, float SlopeAngle)
+    private void ClimbSlope(ref Vector2 velocity, float SlopeAngle)
     {
         float moveDistance = Mathf.Abs(velocity.x);
         float climbVelocityY = Mathf.Sin(SlopeAngle * Mathf.Deg2Rad) * moveDistance;
@@ -226,7 +227,7 @@ public abstract class Creatures : RaycastController
         }
     }
 
-    private void DescendSlope(ref Vector3 velocity)
+    private void DescendSlope(ref Vector2 velocity)
     {
         float dirX = Mathf.Sign(velocity.x);
         Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft;
