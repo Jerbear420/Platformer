@@ -61,7 +61,10 @@ public abstract class Creatures : RaycastController
     private bool _fallThrough;
     public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
 
-    void Awake()
+    private Interactable _interactable;
+    public Interactable Interactable { get { return _interactable; } }
+
+    protected virtual void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
         _meleeAttack = _meleeAttackObject.GetComponent<MeleeAttack>();
@@ -211,6 +214,14 @@ public abstract class Creatures : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.blue);
             if (hit)
             {
+                if (hit.collider.tag == "Interactable")
+                {
+                    Interactable ib = hit.collider.gameObject.GetComponent<Interactable>();
+                    if (_interactable != ib)
+                    {
+                        NearInteractable(ib);
+                    }
+                }
                 if (hit.distance == 0)
                 {
                     continue;
@@ -366,6 +377,11 @@ public abstract class Creatures : RaycastController
         _meleeAttack.Attack();
         Debug.Log("Coroutine done");
 
+    }
+
+    private void NearInteractable(Interactable target)
+    {
+        _interactable = target;
     }
 
 }

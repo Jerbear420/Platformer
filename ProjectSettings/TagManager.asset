@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Prize
   - VerticalThrough
+  - Interactable
   layers:
   - Default
   - TransparentFX

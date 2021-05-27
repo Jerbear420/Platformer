@@ -36,6 +36,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Interact",
+                    "type": "Value",
+                    "id": "03abf7b0-e042-4be5-9158-42cf61a1c045",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -102,6 +110,17 @@
                     "processors": "",
                     "groups": "KM",
                     "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11714f4f-c769-40dc-86b3-ded8cf0fb3fb",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KM",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

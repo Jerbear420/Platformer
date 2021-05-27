@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Containers : MonoBehaviour
+[RequireComponent(typeof(Interactable))]
+public abstract class Containers : MonoBehaviour
 {
     [Range(1, 100)]
     [SerializeField] private int coins;
 
-    void OnTriggerEnter2D(Collider2D collider)
+    private Interactable _interactable;
+
+    void Awake()
     {
-        Debug.Log("AAA");
+        _interactable = GetComponent<Interactable>();
+        _interactable.RegisterInteraction(Interact);
     }
+    public virtual void Interact(Creatures interactor)
+    {
+    }
+
 }

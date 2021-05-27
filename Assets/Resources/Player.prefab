@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2205870922751153294}
   - component: {fileID: 2205870922751153295}
   - component: {fileID: 2205870922751153292}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: MeleeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -72,12 +72,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2205870922840303175}
   - component: {fileID: 2205870922840303173}
-  - component: {fileID: 2205870922840303171}
   - component: {fileID: 2205870922840303168}
   - component: {fileID: 2205870922840303170}
   - component: {fileID: 2205870922840303198}
   - component: {fileID: 2205870922840303169}
-  m_Layer: 0
+  - component: {fileID: 1907583025}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -150,19 +150,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2205870922840303171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2205870922840303174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03052fa29b62d947820695c67318c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerControls: {fileID: -944628639613478452, guid: 23b725bab58351c4c859f888d68760f0, type: 3}
 --- !u!114 &2205870922840303168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,8 +242,32 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 8
+  _collider: {fileID: 0}
+  horizontalRayCount: 4
+  verticalRayCount: 4
+  horizontalRaySpacing: 0
+  verticleRaySpacing: 0
   _movementSpeed: 6
   _attackSpeed: 1
-  _jumpPower: 3.5
+  _maxJumpPower: 3.5
   _hostile: 0
+  wallJumpClimb: {x: 7.5, y: 16}
+  wallJumpOff: {x: 8.5, y: 7}
+  wallLeap: {x: 18, y: 17}
+  fallThrough: 0
+  wallStickTime: 0.25
+  wallSlideSpeedMax: 3
   _meleeAttackObject: {fileID: 2205870922751153329}
+--- !u!114 &1907583025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205870922840303174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64bcfdcd8f2aca4fb4ff402b6b9f396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerControls: {fileID: -944628639613478452, guid: 23b725bab58351c4c859f888d68760f0, type: 3}
