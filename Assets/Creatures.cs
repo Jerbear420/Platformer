@@ -8,8 +8,10 @@ public abstract class Creatures : RaycastController
 
     [SerializeField] protected float _movementSpeed;
     [SerializeField] protected float _attackSpeed;
-    [SerializeField] protected float _jumpPower;
+    [SerializeField] protected float _maxJumpPower;
     [SerializeField] protected bool _hostile;
+
+    public float minJumpPower;
 
     public Vector2 wallJumpClimb;
     public Vector2 wallJumpOff;
@@ -25,7 +27,7 @@ public abstract class Creatures : RaycastController
     protected Dictionary<Creatures, float> _ignoreHit;
     public Rigidbody2D Body { get { return _body; } }
     public float MovementSpeed { get { return _movementSpeed; } }
-    public float JumpPower { get { return _jumpPower; } }
+    public float MaxJumpPower { get { return _maxJumpPower; } }
     public float AttackSpeed { get { return _attackSpeed; } }
     private Health _health;
     public Health Health { get { return _health; } }
@@ -43,6 +45,8 @@ public abstract class Creatures : RaycastController
     float maxClimbSlope = 80f;
     float maxDescendAngle = 75f;
     public CollisionInfo _collisions;
+    private bool _fallThrough;
+    public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
 
     void Awake()
     {
@@ -163,6 +167,19 @@ public abstract class Creatures : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.red);
             if (hit)
             {
+
+                if (hit.collider.tag == "VerticalThrough")
+                {
+                    if (dirY == 1 || hit.distance == 0)
+                    {
+                        continue;
+                    }
+                    if (_fallThrough)
+                    {
+                        continue;
+                    }
+                }
+
                 velocity.y = (hit.distance - skinWidth) * dirY;
                 rayLength = hit.distance;
 
