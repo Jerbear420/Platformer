@@ -15,13 +15,23 @@ public abstract class Creatures : RaycastController
     public float MinJumpPower { get { return minJumpPower; } }
 
     //Jump data
-    protected Vector2 wallJumpClimb;
-    protected Vector2 wallJumpOff;
-    protected Vector2 wallLeap;
-    public Vector2 WallJumpClimb { get { return wallJumpClimb; } }
-    public Vector2 WallJumpOff { get { return wallJumpOff; } }
-    public Vector2 WallLeap { get { return wallLeap; } }
+    public Vector2 wallJumpClimb;
+    public Vector2 wallJumpOff;
+    public Vector2 wallLeap;
+    float accelerationTimeAirborn = .2f;
+    float accelerationTimeGround = .1f;
+    float _timeToJumpApex = .4f;
+    public bool fallThrough;
+    public float wallStickTime = .25f;
+    float timeToWallUnstick;
+    public float wallSlideSpeedMax = 3;
+    protected float _maxJumpVelocity;
+    protected float _minJumpVelocity;
+    private bool wallSliding;
 
+    private int wallDirX;
+
+    private float velocityXSmoothing;
     protected bool _canAttack;
     protected bool _attacking;
     public bool CanAttack { get { return _canAttack; } }
@@ -33,11 +43,11 @@ public abstract class Creatures : RaycastController
     public float AttackSpeed { get { return _attackSpeed; } }
     private Health _health;
     public Health Health { get { return _health; } }
-    protected bool _canJump;
-    protected bool _falling;
-    public bool CanJump { get { return _canJump; } }
-    public bool Falling { get { return _falling; } }
+    protected bool _jump;
     protected Vector2 _direction;
+    protected Vector2 _velocity;
+
+    public Vector2 Velocity { get { return _velocity; } }
     public Vector2 Direction { get { return _direction; } set { _direction = value; } }
     protected BoxCollider2D _hitBox;
     protected float _fallMultipler;
@@ -47,6 +57,7 @@ public abstract class Creatures : RaycastController
     float maxClimbSlope = 80f;
     float maxDescendAngle = 75f;
     public CollisionInfo _collisions;
+    private float _gravity;
     private bool _fallThrough;
     public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
 
@@ -54,18 +65,19 @@ public abstract class Creatures : RaycastController
     {
         _body = GetComponent<Rigidbody2D>();
         _meleeAttack = _meleeAttackObject.GetComponent<MeleeAttack>();
-        _falling = false;
         _canAttack = true;
         _renderer = GetComponent<SpriteRenderer>();
         _collisions = new CollisionInfo();
         _hitBox = gameObject.GetComponent<BoxCollider2D>();
         _ignoreHit = new Dictionary<Creatures, float>();
-        _canJump = true;
         _fallMultipler = 2.5f;
         _attacking = false;
         _health = GetComponent<Health>();
         _health.RegisterDeathMethod(OnDeath);
         _collisions.faceDir = 1;
+        _gravity = -(2 * _maxJumpPower) / Mathf.Pow(_timeToJumpApex, 2);
+        _maxJumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
+        _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * minJumpPower);
     }
 
     public void Move(Vector2 velocity, bool standingOnPlatform = false)
@@ -92,6 +104,86 @@ public abstract class Creatures : RaycastController
         if (standingOnPlatform)
         {
             _collisions.below = true;
+        }
+    }
+
+    void FixedUpdate()
+    {
+
+        wallSliding = false;
+        wallDirX = (_collisions.left) ? -1 : 1;
+        float targetVelocityX = _direction.x * _movementSpeed;
+        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
+
+        HandleWallSliding();
+        _velocity.y += _gravity * Time.deltaTime;
+        Move(_velocity * Time.deltaTime);
+        if (_collisions.above || _collisions.below)
+        {
+            velocityXSmoothing = 0;
+            _velocity.y = 0;
+        }
+    }
+
+    private void HandleWallSliding()
+    {
+        if ((_collisions.left || _collisions.right) && !_collisions.below && _velocity.y < 0)
+        {
+            wallSliding = true;
+            if (_velocity.y < -wallSlideSpeedMax)
+            {
+                _velocity.y = -wallSlideSpeedMax;
+            }
+            if (timeToWallUnstick > 0)
+            {
+                _velocity.x = 0;
+                if (_direction.x != wallDirX && _direction.x != 0)
+                {
+                    timeToWallUnstick -= Time.deltaTime;
+                }
+                else
+                {
+                    timeToWallUnstick = wallStickTime;
+                }
+            }
+            else
+            {
+                timeToWallUnstick = wallStickTime;
+            }
+        }
+    }
+    public void Jump(bool released = false)
+    {
+        if ((_collisions.below || wallSliding) && !released)
+        {
+            if (!wallSliding)
+            {
+                _velocity.y = _maxJumpVelocity;
+            }
+            else
+            {
+
+                if (wallDirX == _direction.x)
+                {
+                    _velocity.x = -wallDirX * wallJumpClimb.x;
+                    _velocity.y = wallJumpClimb.y;
+                }
+                else if (_direction.x == 0)
+                {
+                    _velocity.x = -wallDirX * wallJumpOff.x;
+                    _velocity.y = wallJumpOff.y;
+                }
+                else
+                {
+                    _velocity.x = -wallDirX * wallLeap.x;
+                    _velocity.y = wallLeap.y;
+                }
+            }
+
+        }
+        else if (_velocity.y > _minJumpVelocity && released)
+        {
+            _velocity.y = _minJumpVelocity;
         }
     }
 
