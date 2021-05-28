@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(Backpack))]
 public abstract class Creatures : RaycastController
 {
 
@@ -51,8 +52,6 @@ public abstract class Creatures : RaycastController
     public Vector2 Direction { get { return _direction; } set { _direction = value; } }
     protected BoxCollider2D _hitBox;
     protected float _fallMultipler;
-    [SerializeField] private GameObject _meleeAttackObject;
-    protected MeleeAttack _meleeAttack;
     private SpriteRenderer _renderer;
     float maxClimbSlope = 80f;
     float maxDescendAngle = 75f;
@@ -61,13 +60,16 @@ public abstract class Creatures : RaycastController
     private bool _fallThrough;
     public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
 
-    private Interactable _interactable;
-    public Interactable Interactable { get { return _interactable; } }
+    protected Backpack _backpack;
+    public Backpack Backpack { get { return _backpack; } }
+    private IInteractable _interactable;
+    private Transform interactableCache;
+    public Interactable Interactable { get { return _interactable.Interactable; } }
 
     protected virtual void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
-        _meleeAttack = _meleeAttackObject.GetComponent<MeleeAttack>();
+        _backpack = GetComponent<Backpack>();
         _canAttack = true;
         _renderer = GetComponent<SpriteRenderer>();
         _collisions = new CollisionInfo();
@@ -196,6 +198,11 @@ public abstract class Creatures : RaycastController
         Destroy(gameObject);
     }
 
+    public void ClearInteractables()
+    {
+        _interactable = null;
+        interactableCache = null;
+    }
     private void HorizontalCollisions(ref Vector2 velocity)
     {
         float dirX = _collisions.faceDir;
@@ -216,10 +223,16 @@ public abstract class Creatures : RaycastController
             {
                 if (hit.collider.tag == "Interactable")
                 {
-                    Interactable ib = hit.collider.gameObject.GetComponent<Interactable>();
-                    if (_interactable != ib)
+                    if (hit.collider.transform != interactableCache)
                     {
+                        IInteractable ib = hit.collider.gameObject.GetComponent<IInteractable>();
+
                         NearInteractable(ib);
+                        interactableCache = hit.collider.transform;
+                    }
+                    if (_interactable.PassThrough)
+                    {
+                        continue;
                     }
                 }
                 if (hit.distance == 0)
@@ -271,7 +284,20 @@ public abstract class Creatures : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.red);
             if (hit)
             {
+                if (hit.collider.tag == "Interactable")
+                {
+                    if (hit.collider.transform != interactableCache)
+                    {
+                        IInteractable ib = hit.collider.gameObject.GetComponent<IInteractable>();
 
+                        NearInteractable(ib);
+                        interactableCache = hit.collider.transform;
+                    }
+                    if (_interactable.PassThrough)
+                    {
+                        continue;
+                    }
+                }
                 if (hit.collider.tag == "VerticalThrough")
                 {
                     if (dirY == 1 || hit.distance == 0)
@@ -358,30 +384,12 @@ public abstract class Creatures : RaycastController
             }
         }
     }
-    IEnumerator Attacking()
-    {
-        _attacking = true;
-        _canAttack = false;
-        yield return new WaitForSeconds(.5f);
-        _attacking = false;
-        _canAttack = true;
-
-    }
 
 
-    public void Attack()
-    {
-        Debug.Log("Process attack");
-        _canAttack = false;
-        StartCoroutine(Attacking());
-        _meleeAttack.Attack();
-        Debug.Log("Coroutine done");
-
-    }
-
-    private void NearInteractable(Interactable target)
+    private void NearInteractable(IInteractable target)
     {
         _interactable = target;
+        _interactable.Nearby(this);
     }
 
 }

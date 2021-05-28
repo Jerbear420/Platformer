@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 4180696799854208211}
   m_Layer: 0
   m_Name: coin_01
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2823137730953917698
 Transform:
   m_ObjectHideFlags: 0
