@@ -49,7 +49,6 @@ public class PlayerController : PlatformerSystem
 
         if (_player.CanAttack)
         {
-            _player.Attack();
         }
         else
         {
@@ -87,7 +86,15 @@ public class PlayerController : PlatformerSystem
         {
             if (_player.Interactable)
             {
-                _player.Interactable.Interacted(_player);
+                Debug.Log((_player.Interactable.transform.position - _player.transform.position).magnitude);
+                if ((_player.Interactable.transform.position - _player.transform.position).magnitude <= 2f)
+                {
+                    _player.Interactable.Interacted(_player);
+                }
+                else
+                {
+                    _player.ClearInteractables();
+                }
             }
         }
     }

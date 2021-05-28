@@ -8,13 +8,12 @@ public class CoinBox : Containers
     private int _coins;
     public override void Interact(Creatures interactor)
     {
-        if (interactor is Player)
-        {
-            Player plr = interactor as Player;
-            Item reward = Instantiate(SystemController.ItemList[1]);
-            reward.SetQuantity(_coins);
-            plr.Reward(reward);
-        }
+        Debug.Log("Interact with coinbox");
+        Item reward = Instantiate(SystemController.ItemList[1]);
+        reward.SetQuantity(_coins);
+        reward.SetOwner(interactor);
+        interactor.Backpack.AddItem(reward);
+
     }
 
 }

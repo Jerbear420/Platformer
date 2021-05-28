@@ -2,6 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+interface IInteractable
+{
+    Interactable Interactable { get; }
+    bool PassThrough { get; }
+    void Interact(Creatures interactor);
+    void Nearby(Creatures interactor);
+}
+interface ITriggerable
+{
+    void OnTrigger();
+    bool Triggered { get; }
+    bool CanTrigger { get; }
+}
 public class SystemController : MonoBehaviour
 {
     [SerializeField]

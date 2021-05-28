@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 871146538260335360}
   m_Layer: 3
   m_Name: MovingPlatform
-  m_TagString: Untagged
+  m_TagString: VerticalThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,10 +135,10 @@ MonoBehaviour:
     m_Bits: 64
   localWaypoints:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 3.46, z: 0}
-  - {x: 4.81, y: 3.46, z: 0}
+  - {x: 7.68, y: -1.45, z: 0}
+  - {x: 0, y: 7.96, z: 0}
   globalWaypoints: []
   cyclic: 0
   waitTime: 0
-  easeAmount: 0
-  speed: 2
+  easeAmount: 1
+  speed: 3
