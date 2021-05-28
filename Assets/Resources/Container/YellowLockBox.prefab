@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6794035357513938432}
   - component: {fileID: 3072422196621985639}
   - component: {fileID: 8532446641333216018}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: YellowLockBox
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,3 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49bc55171d5ba2c48984c48f09ea37a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _passThrough: 0
+  key: {fileID: 5107867227234464082, guid: 14eec050a42bfa44e976c7cad984bd06, type: 3}
+  Reward: {fileID: 0}
+  disabledImage: {fileID: 21300000, guid: 10e742d121511c241b853535faf45ef2, type: 3}
+  enabledImage: {fileID: 21300000, guid: ecc69da36eb89814894d31123f5129ad, type: 3}

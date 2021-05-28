@@ -13,6 +13,8 @@ public class Switch : MonoBehaviour, IInteractable
     public Interactable Interactable { get { return _interactable; } }
     private SpriteRenderer _renderer;
 
+    [SerializeField] private bool _timed;
+    [SerializeField] private float _duration;
     [SerializeField] private GameObject _triggerObject;
     private ITriggerable _triggerable;
     void Awake()
@@ -22,7 +24,6 @@ public class Switch : MonoBehaviour, IInteractable
         _interactable.RegisterInteraction(Interact, Nearby);
         if (_triggerObject)
         {
-            Debug.Log("Set triggerable");
             _triggerable = _triggerObject.GetComponent<ITriggerable>();
         }
     }
@@ -31,12 +32,20 @@ public class Switch : MonoBehaviour, IInteractable
     {
         if (_triggerable != null)
         {
-            Debug.Log("Trigger!");
-            _triggerable.OnTrigger();
-            _renderer.flipX = !_renderer.flipX;
+            Trigger();
+            if (_timed)
+            {
+                Invoke("Trigger", _duration);
+            }
         }
     }
 
+    private void Trigger()
+    {
+
+        _renderer.flipX = !_renderer.flipX;
+        _triggerable.OnTrigger();
+    }
     public void Nearby(Creatures interactor)
     {
 

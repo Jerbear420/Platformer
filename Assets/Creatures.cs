@@ -47,7 +47,7 @@ public abstract class Creatures : RaycastController
     protected bool _jump;
     protected Vector2 _direction;
     protected Vector2 _velocity;
-
+    protected bool _doubleJump;
     public Vector2 Velocity { get { return _velocity; } }
     public Vector2 Direction { get { return _direction; } set { _direction = value; } }
     protected BoxCollider2D _hitBox;
@@ -127,6 +127,10 @@ public abstract class Creatures : RaycastController
         {
             velocityXSmoothing = 0;
             _velocity.y = 0;
+            if (_collisions.below)
+            {
+                _doubleJump = false;
+            }
         }
     }
 
@@ -159,11 +163,17 @@ public abstract class Creatures : RaycastController
     }
     public void Jump(bool released = false)
     {
-        if ((_collisions.below || wallSliding) && !released)
+        if ((_collisions.below || wallSliding || _doubleJump) && !released)
         {
-            if (!wallSliding)
+            if (_doubleJump)
             {
                 _velocity.y = _maxJumpVelocity;
+                _doubleJump = false;
+            }
+            else if (!wallSliding)
+            {
+                _velocity.y = _maxJumpVelocity;
+                _doubleJump = true;
             }
             else
             {

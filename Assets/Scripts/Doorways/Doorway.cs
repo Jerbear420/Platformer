@@ -26,6 +26,7 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
     [SerializeField] private GameObject _doorTop;
     private SpriteRenderer _rendererBot;
     private SpriteRenderer _rendererTop;
+
     void Awake()
     {
         _rendererBot = GetComponent<SpriteRenderer>();
@@ -41,7 +42,6 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
     {
         if (!_locked)
         {
-            Debug.Log("Go through doorway!");
             interactor.gameObject.SetActive(false);
         }
     }
@@ -56,11 +56,10 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
         }
         else
         {
-
             _locked = true;
             _rendererBot.sprite = _lockedSpriteBottom;
-            _rendererBot.sprite = _lockedSpriteTop;
+            _rendererTop.sprite = _lockedSpriteTop;
         }
-        Debug.Log("Triggered doorway!");
+
     }
 }
