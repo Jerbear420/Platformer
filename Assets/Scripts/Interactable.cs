@@ -8,7 +8,12 @@ public class Interactable : MonoBehaviour
     public delegate void OnInteract(Creatures interactor);
     OnInteract interaction;
     OnInteract nearby;
+    public static Dictionary<Transform, IInteractable> AllInteractors = new Dictionary<Transform, IInteractable>();
 
+    void Awake()
+    {
+        AllInteractors.Add(transform, this.GetComponent<IInteractable>());
+    }
     public void RegisterInteraction(OnInteract i, OnInteract n)
     {
         interaction = i;

@@ -132,6 +132,14 @@ public abstract class Creatures : RaycastController
                 _doubleJump = false;
             }
         }
+        if (_interactable != null)
+        {
+            var mag = (interactableCache.position - transform.position).magnitude;
+            if (mag >= 2.5f)
+            {
+                ClearInteractables();
+            }
+        }
     }
 
     private void HandleWallSliding()
@@ -201,7 +209,15 @@ public abstract class Creatures : RaycastController
             _velocity.y = _minJumpVelocity;
         }
     }
+    public void Jump(float force)
+    {
+        _velocity.y += force;
+        var hold = _maxJumpVelocity;
+        _maxJumpVelocity = _velocity.y;
+        Jump();
+        _maxJumpVelocity = hold;
 
+    }
     protected void OnDeath()
     {
         Debug.Log("We died.");
@@ -233,14 +249,9 @@ public abstract class Creatures : RaycastController
             {
                 if (hit.collider.tag == "Interactable")
                 {
-                    if (hit.collider.transform != interactableCache)
-                    {
-                        IInteractable ib = hit.collider.gameObject.GetComponent<IInteractable>();
-
-                        NearInteractable(ib);
-                        interactableCache = hit.collider.transform;
-                    }
-                    if (_interactable.PassThrough)
+                    IInteractable ib = Interactable.AllInteractors[hit.collider.transform];
+                    ib.Nearby(this);
+                    if (ib.PassThrough)
                     {
                         continue;
                     }
@@ -296,14 +307,12 @@ public abstract class Creatures : RaycastController
             {
                 if (hit.collider.tag == "Interactable")
                 {
-                    if (hit.collider.transform != interactableCache)
+                    IInteractable ib = Interactable.AllInteractors[hit.collider.transform];
+                    if (ib != null)
                     {
-                        IInteractable ib = hit.collider.gameObject.GetComponent<IInteractable>();
-
-                        NearInteractable(ib);
-                        interactableCache = hit.collider.transform;
+                        ib.Nearby(this);
                     }
-                    if (_interactable.PassThrough)
+                    if (ib.PassThrough)
                     {
                         continue;
                     }
@@ -396,10 +405,5 @@ public abstract class Creatures : RaycastController
     }
 
 
-    private void NearInteractable(IInteractable target)
-    {
-        _interactable = target;
-        _interactable.Nearby(this);
-    }
 
 }

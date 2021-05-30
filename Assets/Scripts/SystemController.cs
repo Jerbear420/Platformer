@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IInteractable
+public interface IInteractable
 {
     Interactable Interactable { get; }
     bool PassThrough { get; }
