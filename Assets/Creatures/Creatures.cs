@@ -31,7 +31,7 @@ public abstract class Creatures : RaycastController
     private bool wallSliding;
 
     private int wallDirX;
-
+    private Animator _animator;
     private float velocityXSmoothing;
     protected bool _canAttack;
     protected bool _attacking;
@@ -71,6 +71,7 @@ public abstract class Creatures : RaycastController
         _body = GetComponent<Rigidbody2D>();
         _backpack = GetComponent<Backpack>();
         _canAttack = true;
+        _animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
         _collisions = new CollisionInfo();
         _hitBox = gameObject.GetComponent<BoxCollider2D>();
@@ -104,6 +105,10 @@ public abstract class Creatures : RaycastController
         if (velocity.y != 0f)
         {
             VerticleCollisions(ref velocity);
+            if (velocity.y < 0f)
+            {
+                _animator.SetBool("Jump", false);
+            }
         }
         transform.Translate(velocity);
         if (standingOnPlatform)
@@ -130,18 +135,45 @@ public abstract class Creatures : RaycastController
             if (_collisions.below)
             {
                 _doubleJump = false;
+                _animator.SetBool("Jump", false);
+                _animator.SetBool("Grounded", true);
+
             }
         }
         if (_interactable != null)
         {
-            var mag = (interactableCache.position - transform.position).magnitude;
+            var mag = (_interactable.Interactable.transform.position - transform.position).magnitude;
             if (mag >= 2.5f)
             {
                 ClearInteractables();
             }
         }
+        Animate();
     }
 
+    private void Animate()
+    {
+        if (_animator != null)
+        {
+            if (_direction.x < 0)
+            {
+                _renderer.flipX = true;
+                _animator.SetBool("Skid", false);
+            }
+            else if (_direction.x > 0)
+            {
+                _renderer.flipX = false;
+                _animator.SetBool("Skid", false);
+            }
+            else if (_direction.x == 0)
+            {
+                _animator.SetBool("Skid", true);
+            }
+
+            _animator.SetFloat("X", Mathf.Abs(_velocity.x));
+            _animator.speed = 1 + (Mathf.Abs(_velocity.x) / 100);
+        }
+    }
     private void HandleWallSliding()
     {
         if ((_collisions.left || _collisions.right) && !_collisions.below && _velocity.y < 0)
@@ -176,11 +208,16 @@ public abstract class Creatures : RaycastController
             if (_doubleJump)
             {
                 _velocity.y = _maxJumpVelocity;
+                _animator.SetBool("Grounded", false);
+                _animator.SetBool("Jump", true);
+
                 _doubleJump = false;
             }
             else if (!wallSliding)
             {
                 _velocity.y = _maxJumpVelocity;
+                _animator.SetBool("Grounded", false);
+                _animator.SetBool("Jump", true);
                 _doubleJump = true;
             }
             else
@@ -251,6 +288,7 @@ public abstract class Creatures : RaycastController
                 {
                     IInteractable ib = Interactable.AllInteractors[hit.collider.transform];
                     ib.Nearby(this);
+                    _interactable = ib;
                     if (ib.PassThrough)
                     {
                         continue;
