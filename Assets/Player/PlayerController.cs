@@ -47,13 +47,8 @@ public class PlayerController : PlatformerSystem
     private void OnAttack(InputAction.CallbackContext context)
     {
 
-        if (_player.CanAttack)
-        {
-        }
-        else
-        {
-            Debug.Log("Cant attack yet!");
-        }
+
+        _player.Attack();
 
     }
     private void OnJump(InputAction.CallbackContext context)

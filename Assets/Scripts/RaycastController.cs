@@ -20,6 +20,8 @@ public class RaycastController : PlatformerSystem
     [HideInInspector]
     public float verticleRaySpacing;
     public const float skinWidth = .015f;
+
+    public float SkinWidth { get { return skinWidth; } }
     // Start is called before the first frame update
     public virtual void Start()
     {

@@ -11,7 +11,6 @@ public abstract class Creatures : RaycastController
     [SerializeField] protected float _attackSpeed;
     [SerializeField] protected float _maxJumpPower;
     [SerializeField] protected bool _hostile;
-
     protected float minJumpPower;
     public float MinJumpPower { get { return minJumpPower; } }
 
@@ -36,9 +35,7 @@ public abstract class Creatures : RaycastController
     protected bool _canAttack;
     protected bool _attacking;
     public bool CanAttack { get { return _canAttack; } }
-    protected Rigidbody2D _body;
     protected Dictionary<Creatures, float> _ignoreHit;
-    public Rigidbody2D Body { get { return _body; } }
     public float MovementSpeed { get { return _movementSpeed; } }
     public float MaxJumpPower { get { return _maxJumpPower; } }
     public float AttackSpeed { get { return _attackSpeed; } }
@@ -50,7 +47,6 @@ public abstract class Creatures : RaycastController
     protected bool _doubleJump;
     public Vector2 Velocity { get { return _velocity; } }
     public Vector2 Direction { get { return _direction; } set { _direction = value; } }
-    protected BoxCollider2D _hitBox;
     protected float _fallMultipler;
     private SpriteRenderer _renderer;
     float maxClimbSlope = 80f;
@@ -60,6 +56,9 @@ public abstract class Creatures : RaycastController
     private bool _fallThrough;
     public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
 
+    public float lastAttackDelta;
+
+
     protected Backpack _backpack;
     public Backpack Backpack { get { return _backpack; } }
     private IInteractable _interactable;
@@ -68,13 +67,11 @@ public abstract class Creatures : RaycastController
 
     protected virtual void Awake()
     {
-        _body = GetComponent<Rigidbody2D>();
         _backpack = GetComponent<Backpack>();
         _canAttack = true;
         _animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
         _collisions = new CollisionInfo();
-        _hitBox = gameObject.GetComponent<BoxCollider2D>();
         _ignoreHit = new Dictionary<Creatures, float>();
         _fallMultipler = 2.5f;
         _attacking = false;
@@ -84,6 +81,7 @@ public abstract class Creatures : RaycastController
         _gravity = -(2 * _maxJumpPower) / Mathf.Pow(_timeToJumpApex, 2);
         _maxJumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
         _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * minJumpPower);
+        lastAttackDelta = 0f;
     }
 
     public void Move(Vector2 velocity, bool standingOnPlatform = false)
@@ -107,7 +105,10 @@ public abstract class Creatures : RaycastController
             VerticleCollisions(ref velocity);
             if (velocity.y < 0f)
             {
-                _animator.SetBool("Jump", false);
+                if (_animator != null)
+                {
+                    _animator.SetBool("Jump", false);
+                }
             }
         }
         transform.Translate(velocity);
@@ -135,8 +136,11 @@ public abstract class Creatures : RaycastController
             if (_collisions.below)
             {
                 _doubleJump = false;
-                _animator.SetBool("Jump", false);
-                _animator.SetBool("Grounded", true);
+                if (_animator != null)
+                {
+                    _animator.SetBool("Jump", false);
+                    _animator.SetBool("Grounded", true);
+                }
 
             }
         }
