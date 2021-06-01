@@ -16,11 +16,15 @@ public class Player : Creatures
     }
 
 
-    public void Attack()
+    public override void Attack()
     {
         if (lastAttackDelta == 0f || lastAttackDelta + AttackSpeed < Time.fixedTime)
         {
             lastAttackDelta = Time.fixedTime;
+            if (_animator != null)
+            {
+                _animator.SetTrigger("Attack");
+            }
             Projectiles newShot = Instantiate(_projectile.gameObject).GetComponent<Projectiles>();
             newShot.SetDirection(_collisions.faceDir, transform.position);
             Debug.Log("Attack!");

@@ -13,7 +13,7 @@ public abstract class Creatures : RaycastController
     [SerializeField] protected bool _hostile;
     protected float minJumpPower;
     public float MinJumpPower { get { return minJumpPower; } }
-
+    public static Dictionary<Transform, Creatures> AllCreatures = new Dictionary<Transform, Creatures>();
     //Jump data
     public Vector2 wallJumpClimb;
     public Vector2 wallJumpOff;
@@ -30,7 +30,7 @@ public abstract class Creatures : RaycastController
     private bool wallSliding;
 
     private int wallDirX;
-    private Animator _animator;
+    protected Animator _animator;
     private float velocityXSmoothing;
     protected bool _canAttack;
     protected bool _attacking;
@@ -82,6 +82,7 @@ public abstract class Creatures : RaycastController
         _maxJumpVelocity = Mathf.Abs(_gravity * _timeToJumpApex);
         _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(_gravity) * minJumpPower);
         lastAttackDelta = 0f;
+        AllCreatures.Add(transform, this);
     }
 
     public void Move(Vector2 velocity, bool standingOnPlatform = false)
@@ -262,6 +263,10 @@ public abstract class Creatures : RaycastController
     protected void OnDeath()
     {
         Debug.Log("We died.");
+        if (Creatures.AllCreatures.ContainsKey(transform))
+        {
+            Creatures.AllCreatures.Remove(transform);
+        }
         Destroy(gameObject);
     }
 
@@ -446,6 +451,22 @@ public abstract class Creatures : RaycastController
         }
     }
 
+    public void Damage(float damage)
+    {
+        _health.TakeDamage(damage);
+        if (_animator != null)
+        {
+            _animator.SetTrigger("Hurt");
+        }
+    }
 
+    public virtual void Attack(Creatures target)
+    {
+
+    }
+    public virtual void Attack()
+    {
+
+    }
 
 }

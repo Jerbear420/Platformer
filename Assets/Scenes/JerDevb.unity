@@ -287,30 +287,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &456598249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4116797823379901037, guid: 666213a193e36e246b76993ef153c7eb, type: 3}
-  m_PrefabInstance: {fileID: 4116797823765063812}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &456598250
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456598249}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7a520039b4cfb564b9cf32fd889313aa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &509399175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,6 +3602,18 @@ PrefabInstance:
     - target: {fileID: 4116797823379901037, guid: 666213a193e36e246b76993ef153c7eb, type: 3}
       propertyPath: m_Name
       value: slimeWalk1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116797823379901038, guid: 666213a193e36e246b76993ef153c7eb, type: 3}
+      propertyPath: _agroRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116797823379901038, guid: 666213a193e36e246b76993ef153c7eb, type: 3}
+      propertyPath: _attackRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116797823379901044, guid: 666213a193e36e246b76993ef153c7eb, type: 3}
+      propertyPath: _attackDamage
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 666213a193e36e246b76993ef153c7eb, type: 3}

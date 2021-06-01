@@ -13,6 +13,7 @@ public class Projectiles : RaycastController
     private Vector2 _velocity;
     private Vector2 _direction;
     [SerializeField] private float _movementSpeed;
+    private Creatures _owner;
     private float velocityXSmoothing;
     void Awake()
     {
@@ -20,7 +21,7 @@ public class Projectiles : RaycastController
         _collisions = new CollisionInfo();
         _fallMultipler = 2.5f;
         _collisions.faceDir = 1;
-        _gravity = -(.2f);
+        _gravity = -(1);
         _velocity = Vector2.zero;
         _direction = Vector2.zero;
     }
@@ -73,6 +74,19 @@ public class Projectiles : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.blue);
             if (hit)
             {
+                Debug.Log(hit.transform.gameObject.layer);
+                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Hostile"))
+                {
+                    Debug.Log("Handle hostile hit");
+                    if (Creatures.AllCreatures.ContainsKey(hit.transform))
+                    {
+                        Creatures.AllCreatures[hit.transform].Damage(1);
+                    }
+                    else
+                    {
+                        Debug.LogError("Transofmr not found in AllCreatures");
+                    }
+                }
                 Destroy(gameObject);
             }
         }
@@ -96,10 +110,14 @@ public class Projectiles : RaycastController
         }
     }
 
+    public void SetOwner(Creatures owner)
+    {
+        _owner = owner;
+    }
     public void SetDirection(float dirX, Vector2 postion)
     {
 
-        transform.position = postion + new Vector2(dirX, 1);
+        transform.position = postion + new Vector2(dirX, 0);
         _direction = new Vector2(dirX, 0);
     }
 

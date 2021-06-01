@@ -8,9 +8,11 @@ public class HostileController : MonoBehaviour
     Vector2 _direction;
 
     private Hostile _hostile;
-
+    [SerializeField] private float _agroRange;
+    [SerializeField] private float _attackRange;
     private float deltaTime;
-
+    private float deltaDelay = 1f;
+    private Player _player;
     void Awake()
     {
         _direction = new Vector2(1, 0);
@@ -18,12 +20,31 @@ public class HostileController : MonoBehaviour
         deltaTime = 0f;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (deltaTime >= 1f)
+
+        if (_player != null)
         {
-            CheckHorizion();
-            CheckVertical();
+            if ((_player.transform.position - transform.position).magnitude > _agroRange)
+            {
+                deltaDelay = 1f;
+                _player = null;
+            }
+        }
+        if (deltaTime >= deltaDelay)
+        {
+            if (_player != null)
+            {
+                var dirX = _player.transform.position.x - transform.position.x;
+                _direction = new Vector2(Mathf.Sign(dirX), _direction.y);
+                TryAttacking();
+            }
+            else
+            {
+                CheckHorizion();
+                CheckVertical();
+
+            }
             _hostile.Direction = _direction;
             deltaTime = 0f;
         }
@@ -49,7 +70,15 @@ public class HostileController : MonoBehaviour
             {
                 if (hit.transform.tag == "Player")
                 {
-                    Debug.Log("hit player!");
+                    deltaDelay = .5f;
+                    Debug.Log("ray player!");
+                    _player = Creatures.AllCreatures[hit.transform] as Player;
+                    Debug.Log(hit.distance);
+                    if (hit.distance <= _attackRange)
+                    {
+                        Debug.Log("hit player!");
+                        _hostile.Attack(_player);
+                    }
                 }
                 else
                 {
@@ -70,7 +99,7 @@ public class HostileController : MonoBehaviour
         float dirY = -1;
         float rayLength = 2 + _hostile.SkinWidth;
         Vector2 rayOrigin = (_direction.x == -1) ? _hostile.raycastOrigins.bottomLeft : _hostile.raycastOrigins.bottomRight;
-        rayOrigin += Vector2.right * (_hostile.verticleRaySpacing + (_hostile.Velocity.x / 2));
+        rayOrigin += Vector2.right * (_hostile.verticleRaySpacing + (_hostile.Velocity.x));
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * dirY, rayLength, _hostile.collisionMask);
         Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.gray);
         if (!hit)
@@ -78,15 +107,7 @@ public class HostileController : MonoBehaviour
             _direction.x = -_direction.x;
         }
 
-        if (_hostile._collisions.climbingSlope)
-        {
-            //  float directionX = Mathf.Sign(velocity.x);
-            //  rayLength = Mathf.Abs(velocity.x) + _hostile.SkinWidth;
-            // Vector2 rayOrigin = ((directionX == -1) ? _hostile.raycastOrigins.bottomLeft : _hostile.raycastOrigins.bottomRight) + Vector2.up * velocity.y;
-            // RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, _hostile.collisionMask);
 
-
-        }
     }
     private float GetRandomDirection()
     {
@@ -94,6 +115,14 @@ public class HostileController : MonoBehaviour
         float x = Random.Range(1, 3) - 2;
         Debug.Log(x);
         return x;
+    }
+
+    private void TryAttacking()
+    {
+        if ((_player.transform.position - transform.position).magnitude <= _attackRange)
+        {
+            _hostile.Attack(_player);
+        }
     }
 
 }
