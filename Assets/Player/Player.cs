@@ -42,6 +42,7 @@ public class Player : Creatures
         if (transform.position.y <= SystemController.GetYDeadZone().y)
         {
             transform.position = SystemController.GetSpawnPoint();
+            _powerupData.Reset();
             Damage(1);
         }
     }

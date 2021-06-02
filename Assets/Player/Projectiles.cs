@@ -21,7 +21,7 @@ public class Projectiles : RaycastController
         _collisions = new CollisionInfo();
         _fallMultipler = 2.5f;
         _collisions.faceDir = 1;
-        _gravity = -(1);
+        _gravity = -(.75f);
         _velocity = Vector2.zero;
         _direction = Vector2.zero;
     }
@@ -116,7 +116,7 @@ public class Projectiles : RaycastController
     public void SetDirection(float dirX, Vector2 postion)
     {
 
-        transform.position = postion + new Vector2(dirX, 0);
+        transform.position = postion + new Vector2(dirX, .33f);
         _direction = new Vector2(dirX, 0);
     }
 

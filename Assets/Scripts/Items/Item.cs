@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public abstract class Item : MonoBehaviour, IInteractable
 {
+    //Powerups -- 7
     public static int iid;
     private int _quantity;
     private Creatures _owner;
@@ -22,8 +23,13 @@ public abstract class Item : MonoBehaviour, IInteractable
 
     protected virtual void Awake()
     {
+
         _interactable = GetComponent<Interactable>();
         _interactable.RegisterInteraction(Interact, Nearby);
+        if (!SystemController.ItemList.ContainsKey(this.GetIID()))
+        {
+            SystemController.ItemList.Add(this.GetIID(), this);
+        }
     }
 
     public void SetQuantity(int quantity)

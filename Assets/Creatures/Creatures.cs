@@ -65,6 +65,8 @@ public abstract class Creatures : RaycastController
     private Transform interactableCache;
     public Interactable Interactable { get { return _interactable.Interactable; } }
 
+    public PowerupData _powerupData;
+
     protected virtual void Awake()
     {
         _backpack = GetComponent<Backpack>();
@@ -75,6 +77,8 @@ public abstract class Creatures : RaycastController
         _ignoreHit = new Dictionary<Creatures, float>();
         _fallMultipler = 2.5f;
         _attacking = false;
+        _powerupData = new PowerupData();
+        _powerupData.Reset();
         _health = GetComponent<Health>();
         _health.RegisterDeathMethod(OnDeath);
         _collisions.faceDir = 1;
@@ -129,7 +133,7 @@ public abstract class Creatures : RaycastController
 
         wallSliding = false;
         wallDirX = (_collisions.left) ? -1 : 1;
-        float targetVelocityX = _direction.x * _movementSpeed;
+        float targetVelocityX = _direction.x * (_movementSpeed * _powerupData.bonusSpeed);
         _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
 
         //HandleWallSliding();
@@ -160,23 +164,24 @@ public abstract class Creatures : RaycastController
             }
         }
         Animate();
+        _powerupData.Update();
     }
 
     private void Animate()
     {
+        if (_collisions.faceDir == 1)
+        {
+
+            _renderer.flipX = false;
+        }
+        else if (_collisions.faceDir == -1)
+        {
+            _renderer.flipX = true;
+        }
         if (_animator != null)
         {
-            if (_direction.x < 0)
-            {
-                _renderer.flipX = true;
-                _animator.SetBool("Skid", false);
-            }
-            else if (_direction.x > 0)
-            {
-                _renderer.flipX = false;
-                _animator.SetBool("Skid", false);
-            }
-            else if (_direction.x == 0)
+            _animator.SetBool("Skid", false);
+            if (_direction.x == 0 && Mathf.Abs(_velocity.x) > 0f)
             {
                 _animator.SetBool("Skid", true);
             }
@@ -521,6 +526,44 @@ public abstract class Creatures : RaycastController
     public virtual void Attack()
     {
 
+    }
+
+    public struct PowerupData
+    {
+        public Dictionary<float, Powerups> powerups;
+        public float activeTime;
+        public float bonusSpeed;
+        public float lifeTime;
+
+        public void Powerup(Powerups powerup, float lifetime)
+        {
+            powerups.Add(lifetime + Time.fixedTime, powerup);
+        }
+
+        public void Update()
+        {
+            var bnsSpeed = 1f;
+            foreach (float deadTime in powerups.Keys)
+            {
+                if (deadTime < Time.fixedTime)
+                {
+                    Destroy(powerups[deadTime]);
+                    powerups.Remove(deadTime);
+                }
+                else
+                {
+                    var pwrup = powerups[deadTime];
+                    bnsSpeed = Mathf.Max(pwrup.BonusSpeed + 1, bnsSpeed);
+                }
+            }
+            bonusSpeed = bnsSpeed;
+        }
+
+        public void Reset()
+        {
+            powerups = new Dictionary<float, Powerups>();
+            bonusSpeed = 1f;
+        }
     }
 
 }

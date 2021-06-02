@@ -11,6 +11,7 @@ public class HostileController : MonoBehaviour
     [SerializeField] private float _agroRange;
     [SerializeField] private float _attackRange;
     [SerializeField] private bool _flipped;
+    [SerializeField] private float _sight;
     private float deltaTime;
     private float deltaDelay = 1f;
     private Player _player;
@@ -58,7 +59,7 @@ public class HostileController : MonoBehaviour
     private void CheckHorizion()
     {
         float dirX = (_direction.x == 0) ? _hostile._collisions.faceDir : Mathf.Sign(_direction.x);
-        float rayLength = 2 + _hostile.SkinWidth;
+        float rayLength = _sight + _hostile.SkinWidth;
 
         for (int i = 0; i < _hostile.horizontalRayCount; i++)
         {
