@@ -20,7 +20,7 @@ public class Player : Creatures
 
     public override void Attack()
     {
-        if (lastAttackDelta == 0f || lastAttackDelta + AttackSpeed < Time.fixedTime)
+        if (lastAttackDelta == 0f || lastAttackDelta + AttackSpeed / _powerupData.bonusAS < Time.fixedTime)
         {
             lastAttackDelta = Time.fixedTime;
             if (_animator != null)

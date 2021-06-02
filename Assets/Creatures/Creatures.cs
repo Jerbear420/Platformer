@@ -252,7 +252,7 @@ public abstract class Creatures : RaycastController
         {
             if (_doubleJump)
             {
-                _velocity.y = _maxJumpVelocity;
+                _velocity.y = _maxJumpVelocity * _powerupData.bonusJump;
                 _animator.SetBool("Grounded", false);
                 _animator.SetBool("Jump", true);
 
@@ -260,7 +260,7 @@ public abstract class Creatures : RaycastController
             }
             else if (!wallSliding)
             {
-                _velocity.y = _maxJumpVelocity;
+                _velocity.y = _maxJumpVelocity * _powerupData.bonusJump;
                 _animator.SetBool("Grounded", false);
                 _animator.SetBool("Jump", true);
                 _doubleJump = true;
@@ -288,7 +288,7 @@ public abstract class Creatures : RaycastController
         }
         else if (_velocity.y > _minJumpVelocity && released)
         {
-            _velocity.y = _minJumpVelocity;
+            _velocity.y = _minJumpVelocity * _powerupData.bonusJump;
         }
     }
     public void Jump(float force)
@@ -531,9 +531,10 @@ public abstract class Creatures : RaycastController
     public struct PowerupData
     {
         public Dictionary<float, Powerups> powerups;
-        public float activeTime;
         public float bonusSpeed;
-        public float lifeTime;
+        public float bonusJump;
+        public float bonusAS;
+        public float bonusDamage;
 
         public void Powerup(Powerups powerup, float lifetime)
         {
@@ -543,6 +544,9 @@ public abstract class Creatures : RaycastController
         public void Update()
         {
             var bnsSpeed = 1f;
+            var bnsJmp = 1f;
+            var bnsAS = 1f;
+            var bnsDMG = 1f;
             foreach (float deadTime in powerups.Keys)
             {
                 if (deadTime < Time.fixedTime)
@@ -554,15 +558,24 @@ public abstract class Creatures : RaycastController
                 {
                     var pwrup = powerups[deadTime];
                     bnsSpeed = Mathf.Max(pwrup.BonusSpeed + 1, bnsSpeed);
+                    bnsJmp = Mathf.Max((pwrup.BonusJump * .1f) + 1, bnsJmp);
+                    bnsAS = Mathf.Max(pwrup.AttackSpeed + 1, bnsAS);
+                    bnsDMG = Mathf.Max(pwrup.Damage + 1, bnsDMG);
                 }
             }
             bonusSpeed = bnsSpeed;
+            bonusJump = bnsJmp;
+            bonusAS = bnsAS;
+            bonusDamage = bnsDMG;
         }
 
         public void Reset()
         {
             powerups = new Dictionary<float, Powerups>();
             bonusSpeed = 1f;
+            bonusJump = 1f;
+            bonusAS = 1f;
+            bonusDamage = 1f;
         }
     }
 

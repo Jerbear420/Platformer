@@ -5,8 +5,14 @@ using UnityEngine;
 public class Powerups : Item
 {
 
+    [SerializeField] private float _attackSpeed;
+    public float AttackSpeed { get { return _attackSpeed; } }
+    [SerializeField] private float _damage;
+    public float Damage { get { return _damage; } }
     [SerializeField] private float _bonusSpeed;
     public float BonusSpeed { get { return _bonusSpeed; } }
+    [SerializeField] public float _bonusJump;
+    public float BonusJump { get { return _bonusJump; } }
     [SerializeField] private float _lifeTime;
     public float LifeTime { get { return _lifeTime; } }
     private float _activatedTime;
