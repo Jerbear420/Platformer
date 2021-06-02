@@ -8,6 +8,7 @@ TagManager:
   - VerticalThrough
   - Interactable
   - Hostile
+  - Climbable
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Player
   - Hostile
-  - 
-  - 
+  - Climbable
+  - Trap
   - 
   - 
   - 

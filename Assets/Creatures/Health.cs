@@ -13,6 +13,8 @@ public class Health : PlatformerSystem
     public float MaxHealth { get { return _maxHealth; } }
     public float CurrentHealth { get { return _currentHealth; } }
 
+    public delegate void DamageReceived();
+    public event DamageReceived OnHurt;
     void Awake()
     {
         _owner = GetComponent<Creatures>();
@@ -22,6 +24,15 @@ public class Health : PlatformerSystem
     public void RegisterDeathMethod(OnDeath method)
     {
         _deathMethod = method;
+    }
+
+    public void Heal(float _health)
+    {
+        _currentHealth = Mathf.Min(_currentHealth + _health, _maxHealth);
+        if (OnHurt != null)
+        {
+            OnHurt();
+        }
     }
 
     public void TakeDamage(float damage)
@@ -35,6 +46,11 @@ public class Health : PlatformerSystem
         else
         {
             _currentHealth -= damage;
+        }
+        if (OnHurt != null)
+        {
+            Debug.Log("Event in on hurt");
+            OnHurt();
         }
     }
 }

@@ -13,6 +13,8 @@ public class Player : Creatures
     {
         base.Awake();
         PlayerList.Add(transform, this);
+        transform.position = SystemController.GetSpawnPoint();
+        Debug.Log("Move player");
     }
 
 
@@ -32,6 +34,15 @@ public class Player : Creatures
         else
         {
             Debug.Log("Cooldown");
+        }
+    }
+
+    void Update()
+    {
+        if (transform.position.y <= SystemController.GetYDeadZone().y)
+        {
+            transform.position = SystemController.GetSpawnPoint();
+            Damage(1);
         }
     }
 

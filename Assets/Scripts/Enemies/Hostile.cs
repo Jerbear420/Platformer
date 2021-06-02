@@ -9,7 +9,6 @@ public class Hostile : Creatures
     {
         if (lastAttackDelta == 0f || lastAttackDelta + AttackSpeed < Time.fixedTime)
         {
-            Debug.Log("Do damage!");
             target.Damage(_attackDamage);
             lastAttackDelta = Time.fixedTime;
         }

@@ -10,12 +10,13 @@ public class HostileController : MonoBehaviour
     private Hostile _hostile;
     [SerializeField] private float _agroRange;
     [SerializeField] private float _attackRange;
+    [SerializeField] private bool _flipped;
     private float deltaTime;
     private float deltaDelay = 1f;
     private Player _player;
     void Awake()
     {
-        _direction = new Vector2(1, 0);
+        _direction = (_flipped) ? -Vector2.right : Vector2.right;
         _hostile = GetComponent<Hostile>();
         deltaTime = 0f;
     }

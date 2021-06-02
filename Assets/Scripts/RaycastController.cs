@@ -67,6 +67,8 @@ public class RaycastController : PlatformerSystem
         public Vector3 velocityOld;
         public float slopeAngle, slopeAngleOld;
         public int faceDir;
+        public bool climbable;
+        public Trap trapBelow;
 
         public void Reset()
         {
@@ -74,7 +76,8 @@ public class RaycastController : PlatformerSystem
             left = right = false;
             climbingSlope = false;
             descendingSlope = false;
-
+            climbable = false;
+            trapBelow = null;
             slopeAngleOld = slopeAngle;
             slopeAngle = 0;
         }

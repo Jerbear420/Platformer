@@ -170,6 +170,7 @@ MonoBehaviour:
   wallStickTime: 0.25
   wallSlideSpeedMax: 3
   lastAttackDelta: 0
+  _attackDamage: 0.5
 --- !u!114 &4116797823379901038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agroRange: 15
+  _attackRange: 1.5
+  _flipped: 0
 --- !u!95 &456598250
 Animator:
   serializedVersion: 3

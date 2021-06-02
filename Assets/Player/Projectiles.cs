@@ -77,7 +77,6 @@ public class Projectiles : RaycastController
                 Debug.Log(hit.transform.gameObject.layer);
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Hostile"))
                 {
-                    Debug.Log("Handle hostile hit");
                     if (Creatures.AllCreatures.ContainsKey(hit.transform))
                     {
                         Creatures.AllCreatures[hit.transform].Damage(1);

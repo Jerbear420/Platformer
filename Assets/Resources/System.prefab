@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce1c957d980c9e42b7ca0ea3e911df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnPoint: {x: 26.87, y: -1.38}
+  _YDeadZone: {x: 0, y: -18.44}
   ItemToLoad:
   - {fileID: 4180696799854208211, guid: 40cb13a4d91ced545bb545500bb5f4c9, type: 3}
   - {fileID: 5107867227234464082, guid: 14eec050a42bfa44e976c7cad984bd06, type: 3}

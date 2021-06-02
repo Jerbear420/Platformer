@@ -28,7 +28,7 @@ public abstract class Creatures : RaycastController
     protected float _maxJumpVelocity;
     protected float _minJumpVelocity;
     private bool wallSliding;
-
+    private bool climbing;
     private int wallDirX;
     protected Animator _animator;
     private float velocityXSmoothing;
@@ -117,6 +117,11 @@ public abstract class Creatures : RaycastController
         {
             _collisions.below = true;
         }
+
+        if (_collisions.trapBelow && Mathf.Abs(_velocity.x) >= .65f)
+        {
+            Damage(_collisions.trapBelow.Damage);
+        }
     }
 
     void FixedUpdate()
@@ -127,8 +132,9 @@ public abstract class Creatures : RaycastController
         float targetVelocityX = _direction.x * _movementSpeed;
         _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
 
-        HandleWallSliding();
+        //HandleWallSliding();
         _velocity.y += _gravity * Time.deltaTime;
+        HandleClimbing();
         Move(_velocity * Time.deltaTime);
         if (_collisions.above || _collisions.below)
         {
@@ -145,7 +151,7 @@ public abstract class Creatures : RaycastController
 
             }
         }
-        if (_interactable != null)
+        if (_interactable != null && _interactable.Interactable != null)
         {
             var mag = (_interactable.Interactable.transform.position - transform.position).magnitude;
             if (mag >= 2.5f)
@@ -177,6 +183,27 @@ public abstract class Creatures : RaycastController
 
             _animator.SetFloat("X", Mathf.Abs(_velocity.x));
             _animator.speed = 1 + (Mathf.Abs(_velocity.x) / 100);
+            if (_collisions.climbable && climbing)
+            {
+                _animator.SetBool("Climbing", true);
+                Debug.Log("Climbing animate!");
+            }
+            else
+            {
+                _animator.SetBool("Climbing", false);
+            }
+        }
+    }
+    private void HandleClimbing()
+    {
+        if (_collisions.climbable)
+        {
+            _velocity.y = 0;
+            if (climbing)
+            {
+                Debug.Log("Climbing!");
+                _velocity.y = (_movementSpeed + _gravity * Time.deltaTime) / 2;
+            }
         }
     }
     private void HandleWallSliding()
@@ -208,6 +235,14 @@ public abstract class Creatures : RaycastController
     }
     public void Jump(bool released = false)
     {
+        if (released)
+        {
+            climbing = false;
+        }
+        else
+        {
+            climbing = true;
+        }
         if ((_collisions.below || wallSliding || _doubleJump) && !released)
         {
             if (_doubleJump)
@@ -293,6 +328,12 @@ public abstract class Creatures : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.blue);
             if (hit)
             {
+                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Climbable"))
+                {
+                    _collisions.climbable = true;
+                    continue;
+                }
+
                 if (hit.collider.tag == "Interactable")
                 {
                     IInteractable ib = Interactable.AllInteractors[hit.collider.transform];
@@ -352,6 +393,19 @@ public abstract class Creatures : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.red);
             if (hit)
             {
+                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Climbable"))
+                {
+                    _collisions.climbable = true;
+                    continue;
+                }
+                else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Trap"))
+                {
+                    Trap trap = Trap.AllTraps[hit.transform];
+                    if (trap != null)
+                    {
+                        _collisions.trapBelow = trap;
+                    }
+                }
                 if (hit.collider.tag == "Interactable")
                 {
                     IInteractable ib = Interactable.AllInteractors[hit.collider.transform];
