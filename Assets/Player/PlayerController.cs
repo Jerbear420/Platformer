@@ -41,7 +41,6 @@ public class PlayerController : PlatformerSystem
     {
         var dir = context.ReadValue<Vector2>();
         _player.Direction = new Vector2(dir.x, _player.Direction.y);
-
     }
 
     private void OnAttack(InputAction.CallbackContext context)
@@ -79,7 +78,7 @@ public class PlayerController : PlatformerSystem
     {
         if (context.performed)
         {
-            if (_player.Interactable)
+            if (_player.Interactable != null)
             {
                 Debug.Log((_player.Interactable.transform.position - _player.transform.position).magnitude);
                 if ((_player.Interactable.transform.position - _player.transform.position).magnitude <= 2f)

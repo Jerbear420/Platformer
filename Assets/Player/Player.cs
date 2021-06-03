@@ -7,16 +7,21 @@ public class Player : Creatures
 {
 
     public static Dictionary<Transform, Player> PlayerList = new Dictionary<Transform, Player>();
+    private bool HealthRegistered;
 
     [SerializeField] private Projectiles _projectile;
-    protected override void Awake()
+    public override void Start()
     {
-        base.Awake();
+        base.Start();
         PlayerList.Add(transform, this);
         transform.position = SystemController.GetSpawnPoint();
         Debug.Log("Move player");
+        if (!HealthRegistered)
+        {
+            OnEnable();
+        }
+        SystemController.Controller.StartMap();
     }
-
 
     public override void Attack()
     {
@@ -46,5 +51,36 @@ public class Player : Creatures
             Damage(1);
         }
     }
+
+    void OnEnable()
+    {
+        if (Health != null)
+        {
+            Health.OnHurt += Hurt;
+            HealthRegistered = true;
+        }
+        else
+        {
+            HealthRegistered = false;
+        }
+    }
+
+    void OnDisable()
+    {
+        if (HealthRegistered)
+        {
+            Health.OnHurt -= Hurt;
+        }
+    }
+
+    private void Hurt()
+    {
+        if (Health.CurrentHealth <= 0)
+        {
+            SystemController.LoadScene("Overworld");
+        }
+    }
+
+
 
 }

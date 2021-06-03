@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Interactable))]
@@ -24,6 +25,8 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
     [SerializeField] private Sprite _unlockedSpriteBottom;
     [SerializeField] private Sprite _unlockedSpriteTop;
     [SerializeField] private GameObject _doorTop;
+    [SerializeField] private Doorway _destination;
+    [SerializeField] private string _teleportScene;
     private SpriteRenderer _rendererBot;
     private SpriteRenderer _rendererTop;
 
@@ -33,6 +36,12 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
         _rendererTop = _doorTop.GetComponent<SpriteRenderer>();
         _interactable = GetComponent<Interactable>();
         _interactable.RegisterInteraction(Interact, Nearby);
+        if (!_locked)
+        {
+
+            _rendererBot.sprite = _unlockedSpriteBottom;
+            _rendererTop.sprite = _unlockedSpriteTop;
+        }
     }
     public void Nearby(Creatures interactor)
     {
@@ -42,7 +51,18 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
     {
         if (!_locked)
         {
-            interactor.gameObject.SetActive(false);
+            if (_destination != null)
+            {
+                interactor.transform.position = _destination.transform.position;
+
+            }
+            else if (_teleportScene != null)
+            {
+                Debug.Log("Scene teleport requested");
+
+                interactor.gameObject.SetActive(false);
+                SystemController.LoadScene(_teleportScene);
+            }
         }
     }
 

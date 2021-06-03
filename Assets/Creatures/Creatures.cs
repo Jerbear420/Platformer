@@ -63,7 +63,7 @@ public abstract class Creatures : RaycastController
     public Backpack Backpack { get { return _backpack; } }
     private IInteractable _interactable;
     private Transform interactableCache;
-    public Interactable Interactable { get { return _interactable.Interactable; } }
+    public Interactable Interactable { get { return (_interactable == null) ? null : _interactable.Interactable; } }
 
     public PowerupData _powerupData;
 
@@ -134,7 +134,7 @@ public abstract class Creatures : RaycastController
         wallSliding = false;
         wallDirX = (_collisions.left) ? -1 : 1;
         float targetVelocityX = _direction.x * (_movementSpeed * _powerupData.bonusSpeed);
-        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
+        _velocity.x = (_direction.x == 0 && _collisions.below) ? 0 : Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing, (_collisions.below) ? accelerationTimeGround : accelerationTimeAirborn);
 
         //HandleWallSliding();
         _velocity.y += _gravity * Time.deltaTime;
@@ -547,12 +547,12 @@ public abstract class Creatures : RaycastController
             var bnsJmp = 1f;
             var bnsAS = 1f;
             var bnsDMG = 1f;
+            var removeFromList = new List<float>();
             foreach (float deadTime in powerups.Keys)
             {
                 if (deadTime < Time.fixedTime)
                 {
-                    Destroy(powerups[deadTime]);
-                    powerups.Remove(deadTime);
+                    removeFromList.Add(deadTime);
                 }
                 else
                 {
@@ -562,6 +562,12 @@ public abstract class Creatures : RaycastController
                     bnsAS = Mathf.Max(pwrup.AttackSpeed + 1, bnsAS);
                     bnsDMG = Mathf.Max(pwrup.Damage + 1, bnsDMG);
                 }
+            }
+            foreach (var r in removeFromList)
+            {
+                powerups.Remove(r);
+                Destroy(powerups[r]);
+
             }
             bonusSpeed = bnsSpeed;
             bonusJump = bnsJmp;

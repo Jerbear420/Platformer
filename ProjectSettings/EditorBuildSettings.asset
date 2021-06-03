@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Overworld.unity
+    guid: c2083ce5f1fe7d242901fd952b940dd2
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/JerDevb.unity
+    guid: 241ff35886d302845b7ac3d175d5f606
+  - enabled: 1
+    path: Assets/Scenes/Lvl 1.unity
+    guid: e056dada076adbe4b89d4a5adfec1220
   m_configObjects: {}

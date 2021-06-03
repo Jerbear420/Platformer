@@ -12,6 +12,9 @@ public class HostileController : MonoBehaviour
     [SerializeField] private float _attackRange;
     [SerializeField] private bool _flipped;
     [SerializeField] private float _sight;
+    [SerializeField] private float _hearing;
+    [SerializeField]
+    private LayerMask HearingMask;
     private float deltaTime;
     private float deltaDelay = 1f;
     private Player _player;
@@ -43,6 +46,7 @@ public class HostileController : MonoBehaviour
             }
             else
             {
+                CheckHearing();
                 CheckHorizion();
                 CheckVertical();
 
@@ -53,6 +57,24 @@ public class HostileController : MonoBehaviour
         else
         {
             deltaTime += Time.deltaTime;
+        }
+    }
+
+    private void CheckHearing()
+    {
+
+        float rayLength = _hearing + _hostile.SkinWidth;
+        Vector2 rayOrigin = (Vector2)_hostile.transform.position + ((_hostile._collisions.faceDir == 1) ? new Vector2(_hostile._collider.bounds.extents.x, 0) : new Vector2(-_hostile._collider.bounds.extents.x, 0));
+        RaycastHit2D hit = Physics2D.CircleCast(rayOrigin, rayLength + _hostile._collider.bounds.size.x, new Vector2(_hostile._collisions.faceDir, 0), 1f, HearingMask);
+        if (hit)
+        {
+            if (hit.transform.tag == "Player")
+            {
+                Debug.Log("I hear a player!");
+                _player = Creatures.AllCreatures[hit.transform] as Player;
+                deltaDelay = .5f;
+                deltaTime += 1f;
+            }
         }
     }
 
@@ -73,23 +95,24 @@ public class HostileController : MonoBehaviour
                 if (hit.transform.tag == "Player")
                 {
                     deltaDelay = .5f;
-                    Debug.Log("ray player!");
                     _player = Creatures.AllCreatures[hit.transform] as Player;
                     Debug.Log(hit.distance);
                     if (hit.distance <= _attackRange)
                     {
-                        Debug.Log("hit player!");
+                        deltaTime += 1f;
                         _hostile.Attack(_player);
                     }
                 }
                 else
                 {
-                    Debug.Log("collision ----" + hit.transform.name);
-                    _direction.x = -_direction.x;
+                    var blocked = (_hostile._collisions.faceDir == 1) ? _hostile._collisions.right : _hostile._collisions.left;
+                    if (blocked)
+                    {
+                        _direction.x = -_direction.x;
 
-                    Debug.Log(_direction.x);
-                    break;
-
+                        Debug.Log(_direction.x);
+                        break;
+                    }
                 }
 
             }
@@ -99,11 +122,11 @@ public class HostileController : MonoBehaviour
     private void CheckVertical()
     {
         float dirY = -1;
-        float rayLength = 2 + _hostile.SkinWidth;
+        float rayLength = (_hostile._collisions.descendingSlope) ? 6 + _hostile.SkinWidth : 2 + _hostile.SkinWidth;
         Vector2 rayOrigin = (_direction.x == -1) ? _hostile.raycastOrigins.bottomLeft : _hostile.raycastOrigins.bottomRight;
         rayOrigin += Vector2.right * (_hostile.verticleRaySpacing + (_hostile.Velocity.x));
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * dirY, rayLength, _hostile.collisionMask);
-        Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.gray);
+        Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.gray, .5f);
         if (!hit)
         {
             _direction.x = -_direction.x;
@@ -124,6 +147,25 @@ public class HostileController : MonoBehaviour
         if ((_player.transform.position - transform.position).magnitude <= _attackRange)
         {
             _hostile.Attack(_player);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        if (Application.isPlaying)
+        {
+            if (_player == null)
+            {
+                float rayLength = _hearing + _hostile.SkinWidth;
+                Vector2 rayOrigin = (Vector2)_hostile.transform.position + ((_hostile._collisions.faceDir == 1) ? new Vector2(_hostile._collider.bounds.extents.x, 0) : new Vector2(-_hostile._collider.bounds.extents.x, 0));
+                Gizmos.DrawWireSphere(rayOrigin, rayLength);
+            }
+        }
+        else
+        {
+            float rayLength = _hearing;
+            Vector2 rayOrigin = transform.position;
+            Gizmos.DrawWireSphere(rayOrigin, rayLength);
         }
     }
 
