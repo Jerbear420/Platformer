@@ -74,12 +74,11 @@ public class Projectiles : RaycastController
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.blue);
             if (hit)
             {
-                Debug.Log(hit.transform.gameObject.layer);
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Hostile"))
                 {
                     if (Creatures.AllCreatures.ContainsKey(hit.transform))
                     {
-                        Creatures.AllCreatures[hit.transform].Damage(1);
+                        Creatures.AllCreatures[hit.transform].Damage(1, _owner);
                     }
                     else
                     {

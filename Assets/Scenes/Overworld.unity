@@ -686,6 +686,10 @@ PrefabInstance:
       value: -5.48
       objectReference: {fileID: 0}
     - target: {fileID: 4379703647359256963, guid: 2f0699ff5f4870143b8867bd98d5584e, type: 3}
+      propertyPath: _isOverworld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379703647359256963, guid: 2f0699ff5f4870143b8867bd98d5584e, type: 3}
       propertyPath: _spawnPoint.x
       value: -10.83
       objectReference: {fileID: 0}

@@ -7,7 +7,6 @@ public class Coin : Item
     new public static int iid = 1;
     public override int GetIID()
     {
-        Debug.Log("Inside Coin");
         return iid;
     }
 }

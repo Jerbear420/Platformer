@@ -18,7 +18,6 @@ public class Interactable : MonoBehaviour
     {
         interaction = i;
         nearby = n;
-        Debug.Log("Registered interaction");
     }
 
     public void Interacted(Creatures interator)

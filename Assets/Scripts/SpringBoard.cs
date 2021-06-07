@@ -63,10 +63,8 @@ public class SpringBoard : RaycastController, IInteractable
                 {
                     if (hit.transform.tag == "Player")
                     {
-                        Debug.Log("Bounce the player");
                         Creatures player = hit.transform.gameObject.GetComponent<Creatures>();
                         player.Jump(_power);
-                        Debug.Log(_power);
                     }
                 }
             }
@@ -87,7 +85,6 @@ public class SpringBoard : RaycastController, IInteractable
     }
     private void Bounce()
     {
-        Debug.Log("Bounce house!");
         VerticleCollisions();
         _renderer.sprite = _upImg;
         _collider.offset = new Vector2(0, -0.1535392f);

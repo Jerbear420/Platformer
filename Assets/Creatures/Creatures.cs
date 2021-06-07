@@ -11,6 +11,8 @@ public abstract class Creatures : RaycastController
     [SerializeField] protected float _attackSpeed;
     [SerializeField] protected float _maxJumpPower;
     [SerializeField] protected bool _hostile;
+    [SerializeField] private int _scoreBonus;
+    public int ScoreBonus { get { return _scoreBonus; } }
     protected float minJumpPower;
     public float MinJumpPower { get { return minJumpPower; } }
     public static Dictionary<Transform, Creatures> AllCreatures = new Dictionary<Transform, Creatures>();
@@ -56,7 +58,7 @@ public abstract class Creatures : RaycastController
     private bool _fallThrough;
     public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
 
-    public float lastAttackDelta;
+    protected float lastAttackDelta;
 
 
     protected Backpack _backpack;
@@ -88,6 +90,7 @@ public abstract class Creatures : RaycastController
         lastAttackDelta = 0f;
         AllCreatures.Add(transform, this);
     }
+
 
     public void Move(Vector2 velocity, bool standingOnPlatform = false)
     {
@@ -253,16 +256,21 @@ public abstract class Creatures : RaycastController
             if (_doubleJump)
             {
                 _velocity.y = _maxJumpVelocity * _powerupData.bonusJump;
-                _animator.SetBool("Grounded", false);
-                _animator.SetBool("Jump", true);
-
+                if (_animator != null)
+                {
+                    _animator.SetBool("Grounded", false);
+                    _animator.SetBool("Jump", true);
+                }
                 _doubleJump = false;
             }
             else if (!wallSliding)
             {
                 _velocity.y = _maxJumpVelocity * _powerupData.bonusJump;
-                _animator.SetBool("Grounded", false);
-                _animator.SetBool("Jump", true);
+                if (_animator != null)
+                {
+                    _animator.SetBool("Grounded", false);
+                    _animator.SetBool("Jump", true);
+                }
                 _doubleJump = true;
             }
             else
@@ -300,9 +308,8 @@ public abstract class Creatures : RaycastController
         _maxJumpVelocity = hold;
 
     }
-    protected void OnDeath()
+    protected virtual void OnDeath()
     {
-        Debug.Log("We died.");
         if (Creatures.AllCreatures.ContainsKey(transform))
         {
             Creatures.AllCreatures.Remove(transform);
@@ -510,9 +517,9 @@ public abstract class Creatures : RaycastController
         }
     }
 
-    public void Damage(float damage)
+    public void Damage(float damage, Creatures attacker = null)
     {
-        _health.TakeDamage(damage);
+        _health.TakeDamage(damage, attacker);
         if (_animator != null)
         {
             _animator.SetTrigger("Hurt");
@@ -548,19 +555,22 @@ public abstract class Creatures : RaycastController
             var bnsAS = 1f;
             var bnsDMG = 1f;
             var removeFromList = new List<float>();
-            foreach (float deadTime in powerups.Keys)
+            if (powerups.Count > 0)
             {
-                if (deadTime < Time.fixedTime)
+                foreach (float deadTime in powerups.Keys)
                 {
-                    removeFromList.Add(deadTime);
-                }
-                else
-                {
-                    var pwrup = powerups[deadTime];
-                    bnsSpeed = Mathf.Max(pwrup.BonusSpeed + 1, bnsSpeed);
-                    bnsJmp = Mathf.Max((pwrup.BonusJump * .1f) + 1, bnsJmp);
-                    bnsAS = Mathf.Max(pwrup.AttackSpeed + 1, bnsAS);
-                    bnsDMG = Mathf.Max(pwrup.Damage + 1, bnsDMG);
+                    if (deadTime < Time.fixedTime)
+                    {
+                        removeFromList.Add(deadTime);
+                    }
+                    else
+                    {
+                        var pwrup = powerups[deadTime];
+                        bnsSpeed = Mathf.Max(pwrup.BonusSpeed + 1, bnsSpeed);
+                        bnsJmp = Mathf.Max((pwrup.BonusJump * .1f) + 1, bnsJmp);
+                        bnsAS = Mathf.Max(pwrup.AttackSpeed + 1, bnsAS);
+                        bnsDMG = Mathf.Max(pwrup.Damage + 1, bnsDMG);
+                    }
                 }
             }
             foreach (var r in removeFromList)
