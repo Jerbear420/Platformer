@@ -96,53 +96,53 @@ public class HostileController : MonoBehaviour
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.yellow);
             if (hit)
             {
-                if (hit.transform.tag == "Player")
+                switch (hit.transform.tag)
                 {
-                    if (_player == null)
-                    {
-                        deltaDelay = .5f;
-                        _player = Creatures.AllCreatures[hit.transform] as Player;
-                        _hostile._sprinting = true;
-                        Debug.Log(hit.distance);
-                        if (hit.distance <= _attackRange)
+                    case "Player":
+                        if (_player == null)
                         {
-                            deltaTime += 1f;
-                            _hostile.Attack(_player);
-                        }
+                            deltaDelay = .5f;
+                            _player = Creatures.AllCreatures[hit.transform] as Player;
+                            _hostile._sprinting = true;
+                            Debug.Log(hit.distance);
+                            if (hit.distance <= _attackRange)
+                            {
+                                deltaTime += 1f;
+                                _hostile.Attack(_player);
+                            }
 
-                    }
-                }
-                else if (hit.transform.tag == "Interactable")
-                {
-                    if (Interactable.AllInteractors.ContainsKey(hit.transform) && !Interactable.AllInteractors[hit.transform].PassThrough)
-                        if (hit.distance <= .5f + _hostile.SkinWidth)
+                        }
+                        return;
+                    case "Interactable":
+                        if (Interactable.AllInteractors.ContainsKey(hit.transform) && !Interactable.AllInteractors[hit.transform].PassThrough)
+                        {
+                            if (hit.distance <= .5f + _hostile.SkinWidth)
+                            {
+                                _direction.x = -_direction.x;
+                                break;
+                            }
+                        }
+                        return;
+                    case "Projectile":
+                        Debug.Log("Hey a projectile!");
+                        if (Projectiles.LiveProjectiles.ContainsKey(hit.transform) && Projectiles.LiveProjectiles[hit.transform].GetOwner().transform.gameObject.layer == LayerMask.NameToLayer("Player"))
+                            if (_hostile._collisions.below)
+                            {
+                                Debug.Log("Jump!");
+                                _hostile.Jump();
+                            }
+                        return;
+                    default:
+                        var blocked = (_hostile._collisions.faceDir == 1) ? _hostile._collisions.right : _hostile._collisions.left;
+                        if (blocked)
                         {
                             _direction.x = -_direction.x;
+
+                            Debug.Log(_direction.x);
                             break;
                         }
+                        return;
                 }
-                else if (hit.transform.tag == "Projectile")
-                {
-                    Debug.Log("Hey a projectile!");
-                    if (Projectiles.LiveProjectiles.ContainsKey(hit.transform) && Projectiles.LiveProjectiles[hit.transform].GetOwner() != _hostile)
-                        if (_hostile._collisions.below)
-                        {
-                            Debug.Log("Jump!");
-                            _hostile.Jump();
-                        }
-                }
-                else
-                {
-                    var blocked = (_hostile._collisions.faceDir == 1) ? _hostile._collisions.right : _hostile._collisions.left;
-                    if (blocked)
-                    {
-                        _direction.x = -_direction.x;
-
-                        Debug.Log(_direction.x);
-                        break;
-                    }
-                }
-
             }
 
         }

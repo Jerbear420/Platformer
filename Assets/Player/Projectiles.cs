@@ -108,7 +108,7 @@ public class Projectiles : RaycastController
                     }
                 }
 
-                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Hostile") || hit.transform.gameObject.layer == LayerMask.NameToLayer("Player"))
+                if (((_owner is Player) ? hit.transform.gameObject.layer == LayerMask.NameToLayer("Hostile") : hit.transform.gameObject.layer == LayerMask.NameToLayer("Player")))
                 {
                     if (Creatures.AllCreatures.ContainsKey(hit.transform) && this._owner != Creatures.AllCreatures[hit.transform])
                     {

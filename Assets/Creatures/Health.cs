@@ -54,7 +54,6 @@ public class Health : PlatformerSystem
         }
         if (OnHurt != null)
         {
-            Debug.Log("Event in on hurt");
             OnHurt();
         }
     }
