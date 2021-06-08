@@ -34,7 +34,9 @@ public class HostileController : MonoBehaviour
             {
                 deltaDelay = 1f;
                 _player = null;
+                _hostile._sprinting = false;
             }
+
         }
         if (deltaTime >= deltaDelay)
         {
@@ -42,6 +44,7 @@ public class HostileController : MonoBehaviour
             {
                 var dirX = _player.transform.position.x - transform.position.x;
                 _direction = new Vector2(Mathf.Sign(dirX), _direction.y);
+                CheckHorizion();
                 TryAttacking();
             }
             else
@@ -72,6 +75,7 @@ public class HostileController : MonoBehaviour
             {
                 Debug.Log("I hear a player!");
                 _player = Creatures.AllCreatures[hit.transform] as Player;
+                _hostile._sprinting = true;
                 deltaDelay = .5f;
                 deltaTime += 1f;
             }
@@ -94,14 +98,38 @@ public class HostileController : MonoBehaviour
             {
                 if (hit.transform.tag == "Player")
                 {
-                    deltaDelay = .5f;
-                    _player = Creatures.AllCreatures[hit.transform] as Player;
-                    Debug.Log(hit.distance);
-                    if (hit.distance <= _attackRange)
+                    if (_player == null)
                     {
-                        deltaTime += 1f;
-                        _hostile.Attack(_player);
+                        deltaDelay = .5f;
+                        _player = Creatures.AllCreatures[hit.transform] as Player;
+                        _hostile._sprinting = true;
+                        Debug.Log(hit.distance);
+                        if (hit.distance <= _attackRange)
+                        {
+                            deltaTime += 1f;
+                            _hostile.Attack(_player);
+                        }
+
                     }
+                }
+                else if (hit.transform.tag == "Interactable")
+                {
+                    if (Interactable.AllInteractors.ContainsKey(hit.transform) && !Interactable.AllInteractors[hit.transform].PassThrough)
+                        if (hit.distance <= .5f + _hostile.SkinWidth)
+                        {
+                            _direction.x = -_direction.x;
+                            break;
+                        }
+                }
+                else if (hit.transform.tag == "Projectile")
+                {
+                    Debug.Log("Hey a projectile!");
+                    if (Projectiles.LiveProjectiles.ContainsKey(hit.transform) && Projectiles.LiveProjectiles[hit.transform].GetOwner() != _hostile)
+                        if (_hostile._collisions.below)
+                        {
+                            Debug.Log("Jump!");
+                            _hostile.Jump();
+                        }
                 }
                 else
                 {
@@ -144,9 +172,23 @@ public class HostileController : MonoBehaviour
 
     private void TryAttacking()
     {
-        if ((_player.transform.position - transform.position).magnitude <= _attackRange)
+        var normal = (_player.transform.position - transform.position).normalized;
+        var mag = (_player.transform.position - transform.position).magnitude;
+        if (mag <= _attackRange)
         {
             _hostile.Attack(_player);
+            if (Mathf.Sign(normal.x) != Mathf.Sign(_hostile._collisions.faceDir))
+            {
+                Debug.Log("Not facing same dir?");
+                Debug.Log(Mathf.Sign(normal.x));
+                Debug.Log(Mathf.Sign(_hostile._collisions.faceDir));
+                _direction.x = normal.x;
+                return;
+            }
+            if (mag <= _attackRange / 2)
+            {
+                _direction = Vector2.zero;
+            }
         }
     }
 

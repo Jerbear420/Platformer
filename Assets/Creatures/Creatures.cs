@@ -57,7 +57,7 @@ public abstract class Creatures : RaycastController
     private float _gravity;
     private bool _fallThrough;
     public bool FallThrough { get { return _fallThrough; } set { _fallThrough = value; } }
-
+    public bool _sprinting;
     protected float lastAttackDelta;
 
 
@@ -73,6 +73,7 @@ public abstract class Creatures : RaycastController
     {
         _backpack = GetComponent<Backpack>();
         _canAttack = true;
+        _sprinting = false;
         _animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
         _collisions = new CollisionInfo();
@@ -119,7 +120,7 @@ public abstract class Creatures : RaycastController
                 }
             }
         }
-        transform.Translate(velocity);
+        transform.Translate((_sprinting == true) ? velocity * 2 : velocity);
         if (standingOnPlatform)
         {
             _collisions.below = true;
