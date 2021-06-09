@@ -12,15 +12,23 @@ public interface IInteractable
 }
 interface ITriggerable
 {
-    void OnTrigger();
+    void OnTrigger(Creatures interactor);
     bool Triggered { get; }
     bool CanTrigger { get; }
+
 }
+
 public class SystemController : MonoBehaviour
 {
     [SerializeField] private Vector2 _spawnPoint;
     [SerializeField] private Vector2 _YDeadZone;
     [SerializeField] private float _timeLimit;
+    [SerializeField] private bool _isOverworld;
+
+    public delegate void OnSceneChange();
+    public OnSceneChange _sceneMethod;
+
+    public bool IsOverworld { get { return _isOverworld; } }
     private float _startTime;
     private bool _running;
     public float TimeLeft { get { return (Mathf.Max(_startTime + _timeLimit - Time.fixedTime, 0)); } }
@@ -40,11 +48,8 @@ public class SystemController : MonoBehaviour
             if (!ItemList.ContainsKey(item.GetIID()))
             {
                 ItemList.Add(item.GetIID(), item);
-                Debug.Log(item.GetIID() + " Was loaded");
             }
         }
-
-        Debug.Log("Loaded items");
 
         Loaded = true;
     }
@@ -53,7 +58,7 @@ public class SystemController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (_running)
+        if (_running && !_isOverworld)
         {
             if (_startTime + _timeLimit <= Time.fixedTime)
             {
@@ -88,7 +93,7 @@ public class SystemController : MonoBehaviour
     }
     public static Vector2 GetYDeadZone()
     {
-        return _controller._YDeadZone;
+        return ((_controller != null) ? _controller._YDeadZone : new Vector2(0, -100f));
     }
 
     public void StartMap()
@@ -101,6 +106,10 @@ public class SystemController : MonoBehaviour
     {
         if (scene != null)
         {
+            foreach (Player p in Player.PlayerList.Values)
+            {
+                p.Save();
+            }
             SceneManager.LoadScene(scene);
             Debug.Log("Scene is not null!");
 

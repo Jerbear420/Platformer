@@ -32,7 +32,7 @@ public class Switch : MonoBehaviour, IInteractable
     {
         if (_triggerable != null)
         {
-            Trigger();
+            Trigger(interactor);
             if (_timed)
             {
                 Invoke("Trigger", _duration);
@@ -40,11 +40,11 @@ public class Switch : MonoBehaviour, IInteractable
         }
     }
 
-    private void Trigger()
+    private void Trigger(Creatures interactor)
     {
 
         _renderer.flipX = !_renderer.flipX;
-        _triggerable.OnTrigger();
+        _triggerable.OnTrigger(interactor);
     }
     public void Nearby(Creatures interactor)
     {

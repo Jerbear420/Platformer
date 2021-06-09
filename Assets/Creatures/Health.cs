@@ -35,11 +35,16 @@ public class Health : PlatformerSystem
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Creatures attacker)
     {
         if (_currentHealth - damage <= 0f)
         {
             _currentHealth = 0f;
+            if (attacker is Player)
+            {
+                Player p = attacker as Player;
+                p.SaveData.AddScore(_owner.ScoreBonus);
+            }
             _deathMethod();
 
         }
@@ -49,7 +54,6 @@ public class Health : PlatformerSystem
         }
         if (OnHurt != null)
         {
-            Debug.Log("Event in on hurt");
             OnHurt();
         }
     }

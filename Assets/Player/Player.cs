@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(SaveData))]
 public class Player : Creatures
 {
 
     public static Dictionary<Transform, Player> PlayerList = new Dictionary<Transform, Player>();
-    private bool HealthRegistered;
 
     [SerializeField] private Projectiles _projectile;
+    private SaveData _saveData;
+    public SaveData SaveData { get { return _saveData; } }
     public override void Start()
     {
         base.Start();
+        _saveData = GetComponent<SaveData>();
         PlayerList.Add(transform, this);
         transform.position = SystemController.GetSpawnPoint();
-        Debug.Log("Move player");
-        if (!HealthRegistered)
-        {
-            OnEnable();
-        }
         SystemController.Controller.StartMap();
     }
 
@@ -33,8 +31,8 @@ public class Player : Creatures
                 _animator.SetTrigger("Attack");
             }
             Projectiles newShot = Instantiate(_projectile.gameObject).GetComponent<Projectiles>();
+            newShot.SetOwner(this);
             newShot.SetDirection(_collisions.faceDir, transform.position);
-            Debug.Log("Attack!");
         }
         else
         {
@@ -52,35 +50,23 @@ public class Player : Creatures
         }
     }
 
-    void OnEnable()
+
+    protected override void OnDeath()
     {
-        if (Health != null)
+
+        Debug.Log("We died.");
+        if (Creatures.AllCreatures.ContainsKey(transform))
         {
-            Health.OnHurt += Hurt;
-            HealthRegistered = true;
+            Creatures.AllCreatures.Remove(transform);
         }
-        else
-        {
-            HealthRegistered = false;
-        }
+        SystemController.LoadScene("Overworld");
     }
 
-    void OnDisable()
+    public void Save()
     {
-        if (HealthRegistered)
-        {
-            Health.OnHurt -= Hurt;
-        }
-    }
 
-    private void Hurt()
-    {
-        if (Health.CurrentHealth <= 0)
-        {
-            SystemController.LoadScene("Overworld");
-        }
+        _saveData.writeFile();
     }
-
 
 
 }

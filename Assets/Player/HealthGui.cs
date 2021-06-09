@@ -65,7 +65,6 @@ public class HealthGui : MonoBehaviour
 
     private void Refresh()
     {
-        Debug.Log("Refresh!");
         for (int i = 0; i < _player.Health.MaxHealth; i++)
         {
             var remainder = _player.Health.CurrentHealth - Mathf.Floor(_player.Health.CurrentHealth);

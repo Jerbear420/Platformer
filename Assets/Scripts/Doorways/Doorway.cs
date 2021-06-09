@@ -7,11 +7,10 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Interactable))]
 public class Doorway : MonoBehaviour, IInteractable, ITriggerable
 {
-
     private bool _canTrigger;
     public bool CanTrigger { get { return _canTrigger; } }
-
     private bool _triggered;
+
     public bool Triggered { get { return _triggered; } }
     [SerializeField] private bool _passThrough;
     public bool PassThrough { get { return _passThrough; } }
@@ -22,6 +21,7 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
     [SerializeField] private bool _locked;
     [SerializeField] private Sprite _lockedSpriteBottom;
     [SerializeField] private Sprite _lockedSpriteTop;
+    [SerializeField] private int _scoreBonus;
     [SerializeField] private Sprite _unlockedSpriteBottom;
     [SerializeField] private Sprite _unlockedSpriteTop;
     [SerializeField] private GameObject _doorTop;
@@ -58,15 +58,19 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
             }
             else if (_teleportScene != null)
             {
-                Debug.Log("Scene teleport requested");
 
+                if (interactor is Player)
+                {
+                    Player p = interactor as Player;
+                    p.SaveData.AddScore(_scoreBonus);
+                }
                 interactor.gameObject.SetActive(false);
                 SystemController.LoadScene(_teleportScene);
             }
         }
     }
 
-    public void OnTrigger()
+    public void OnTrigger(Creatures interactor)
     {
         if (_locked)
         {
@@ -80,6 +84,5 @@ public class Doorway : MonoBehaviour, IInteractable, ITriggerable
             _rendererBot.sprite = _lockedSpriteBottom;
             _rendererTop.sprite = _lockedSpriteTop;
         }
-
     }
 }

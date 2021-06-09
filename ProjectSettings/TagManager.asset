@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Hostile
   - Climbable
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Hostile
   - Climbable
   - Trap
-  - 
+  - Projectile
   - 
   - 
   - 
